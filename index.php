@@ -1,10 +1,12 @@
 <?php
 	$GLOBALS['root'] = "";
 	$GLOBALS['webRoot'] = "http://" . $_SERVER['HTTP_HOST'] . "/emirweb/";
-	include($GLOBALS['root'] . 'Managers/DomManager.php');
+	include($GLOBALS['root'] . 'Utils/DomManager.php');
+	include($GLOBALS['root'] . 'Utils/GoogleAnalytics.php');
 	include($GLOBALS['root'] . 'Widgets/Group.php');
 	include($GLOBALS['root'] . 'Widgets/NavigationBar.php');
-	DomManager::addCSS('CSS/home.css');
+	DomManager::addCSS('CSS/Home.css');
+	DomManager::addScript('Scripts/Home.js');
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -16,7 +18,7 @@
 <?php echo DomManager::getScripts(); ?>
 </head>
 <body>
-<?php echo getNavigationBar(); ?>
+<?php echo NavigationBar::getNavigationBar(null); ?>
 <div class="Content">
 <?php
 	$groups = array(
@@ -25,7 +27,7 @@
 			'Row' => array (
 				array(
 					'Label' => 'October 12, 2010:',
-					'Text' => '<a href="/pages/StarFighter">StarFighter (JavaScript)</a> available online for first time.'				
+					'Text' => '<a href="' . $GLOBALS['webRoot'] . 'StarFighter.php">StarFighter (JavaScript)</a> available online for first time.'				
 				),
 				array(
 					'Label' => 'October 12, 2010:',
@@ -34,7 +36,7 @@
 			)
 		)
 	);
- 	echo getGroups($groups); 
+ 	echo Group::getGroups($groups); 
 ?>
 </div>
 </body>

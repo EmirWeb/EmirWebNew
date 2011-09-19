@@ -22,45 +22,40 @@
  *		)
  * );
  */
-
-
 DomManager::addCSS('CSS/Widgets/NavigationBar.css');
-function getNavigationBar(){
-	
-	$TEXT = "Text";
-	$LINK = "Link";
-	$TITLE = "Title";
-	
-	$navigationBar = '<div class="NavigationBar">';
-	if (empty($buttons)){
-		$buttons = array(
-			array(
-				$LINK => $GLOBALS['webRoot'] . "pages/Scholastic",
-				$TEXT => "Scholastic",
-				$TITLE => "University of Toronto Class Websites"
-			),
-			array(
-				$LINK => $GLOBALS['webRoot'] . "Files/Resume.pdf",
-				$TEXT => "Resume",
-				$TITLE => "Online Resume"
-			),
-			array(
-				$LINK => $GLOBALS['webRoot'],
-				$TEXT => "Home",
-				$TITLE => "Main Page"
-			)
-		);
-	}
 
-	foreach ($buttons as $button){
-		$navigationBar .=  '
-<a href="' . $button[$LINK] . '">
-	<div class="Button" title="' . $button[$TITLE] . '">
-		' . $button[$TEXT] . '
+class NavigationBar {
+	private static $TEXT = "Text";
+	private static $LINK = "Link";
+	private static $TITLE = "Title";
+
+	static function getNavigationBar($buttons){
+		if (empty($buttons)){
+			$buttons = array(
+				self::getCell( $GLOBALS['webRoot'] . "Scholastic.php", "Scholastic","University of Toronto Class Websites"),
+				self::getCell( $GLOBALS['webRoot'] . "Files/Resume.pdf", "Resume", "Online Resume"),
+				self::getCell( $GLOBALS['webRoot'] , "Home", "Main Page")
+			);
+		}
+
+		$navigationBar = '<div class="NavigationBar">';
+		foreach ($buttons as $button){
+			$navigationBar .=  '
+<a href="' . $button[self::$LINK] . '">
+	<div class="Button" title="' . $button[self::$TITLE] . '">
+		' . $button[self::$TEXT] . '
 	</div>
 </a>';
+		}
+		return $navigationBar . "\n</div>\n";
 	}
 
-	return $navigationBar . "\n</div>\n";
+	private static function getCell($link, $text, $title){
+		return array(
+		self::$LINK => $link,
+		self::$TEXT => $text,
+		self::$TITLE => $title
+		);
+	}
 }
 ?>

@@ -20,11 +20,23 @@ class DomManager {
 	}
 
 	static function addCSS($css){
-		self::addToDom($GLOBALS['webRoot'] . $css, self::$cssKey);
+		if (is_array($css)){
+			foreach ($css as $value){
+				self::addCSS($value);
+			}
+		}else {
+			self::addToDom($GLOBALS['webRoot'] . $css, self::$cssKey);
+		}
 	}
 
 	static function addScript($script){
-		self::addToDom($GLOBALS['webRoot'] . $script, self::$scriptKey);
+		if (is_array($script)){
+			foreach ($script as $value){
+				self::addScript($value);
+			}
+		}else {
+			self::addToDom($GLOBALS['webRoot'] . $script, self::$scriptKey);
+		}
 	}
 
 	private static function getValuesFromDom($key){
@@ -50,7 +62,7 @@ class DomManager {
 	function getScripts(){
 		$script = "";
 		foreach (self::getValuesFromDom(self::$scriptKey) as $value){
-			$script .= '<link rel="stylesheet" type="text/css" href="' . $value . '" />' . "\n";
+			$script .= '<script type="text/javascript" src="' . $value . '"></script> ' . "\n";
 		}
 
 		return $script;

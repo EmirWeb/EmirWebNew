@@ -1,59 +1,63 @@
 <?php
 DomManager::addCss('CSS/Widgets/Group.css');
-
-function getGroups($groups){
-	if (empty($groups)){
-		return;
-	}
-
-	$TITLE = "Title";
-	$ROW = "Row";
-	$GROUP = "Group";
-	$LABEL = "Label";
-	$TEXT = "Text";
-
-	foreach ($groups as $key => $group){
-		if (isset($group[$TITLE])){
-			$title = $group[$TITLE];
+class Group {
+	private static $TITLE = "Title";
+	private static $ROW = "Row";
+	private static $GROUP = "Group";
+	private static $LABEL = "Label";
+	private static $TEXT = "Text";
+	
+	static function getGroups($groups){
+		if (empty($groups)){
+			return;
 		}
 
-		if (isset($group[$ROW])){
-			$rows = $group[$ROW];
-		}
+		$ret = '';
+		
+		foreach ($groups as $key => $group){			
+			if (isset($group[self::$TITLE])){
+				$title = $group[self::$TITLE];
+			}
 
-		$groupToEcho = '';
-			
-		if (!empty($title)){
-			$groupToEcho = '<div class="' . $TITLE . '">' . $title . '</div>';
-		}
+			if (isset($group[self::$ROW])){
+				$rows = $group[self::$ROW];
+			}
 
-		if (!empty($rows)){
-			foreach ($rows as $key => $row){
-				if (isset($row[$LABEL])){
-					$label = $row[$LABEL];
-				}
-				if (isset($row[$TEXT])){
-					$text = $row[$TEXT];
-				}
-				$rowToEcho = '';
-					
-				if (!empty($label)){
-					$rowToEcho = '<div class="' . $LABEL . '">' . $label . '</div>';
-				}
+			$groupToEcho = '';
+				
+			if (!empty($title)){
+				$groupToEcho = '<div class="' . self::$TITLE . '">' . $title . '</div>';
+			}
 
-				if (!empty($text)){
-					$rowToEcho .= $text;
-				}
+			if (!empty($rows)){
+				foreach ($rows as $key => $row){
+					if (isset($row[self::$LABEL])){
+						$label = $row[self::$LABEL];
+					}
+					if (isset($row[self::$TEXT])){
+						$text = $row[self::$TEXT];
+					}
+					$rowToEcho = '';
+						
+					if (!empty($label)){
+						$rowToEcho = '<div class="' . self::$LABEL . '">' . $label . '</div>';
+					}
 
-				if (!empty($rowToEcho)){
-					$groupToEcho .= '<div class="' . $ROW . '">' . $rowToEcho . '</div>';
+					if (!empty($text)){
+						$rowToEcho .= $text;
+					}
+
+					if (!empty($rowToEcho)){
+						$groupToEcho .= '<div class="' . self::$ROW . '">' . $rowToEcho . '</div>';
+					}
 				}
 			}
+			if (!empty($groupToEcho)){
+				$ret.= '<div class="' . self::$GROUP . '">' . $groupToEcho . '</div>' . "\n";
+			}
+
 		}
-		if (!empty($groupToEcho)){
-			return '<div class="' . $GROUP . '">' . $groupToEcho . '</div>' . "\n";
-		}
-		return '';
+		return $ret;
 	}
 }
 ?>
