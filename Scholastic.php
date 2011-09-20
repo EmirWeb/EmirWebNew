@@ -27,7 +27,7 @@
 			'Title' => 'Emir Hasanbegovic',
 			'Row' => array (
 				array(
-					'Text' => '<a href="http://' . $_SERVER["HTTP_HOST"] . '/files/Resume.pdf">My Resume</a>'				
+					'Text' => '<a href="' . $GLOBALS['webRoot'] .  '/Files/Resume.pdf">My Resume</a>'				
 				)
 			)
 		),
