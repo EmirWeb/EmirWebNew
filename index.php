@@ -1,6 +1,6 @@
 <?php
 	$GLOBALS['root'] = "";
-	$GLOBALS['webRoot'] = "http://" . $_SERVER['HTTP_HOST'] . "/emirweb/";
+	$GLOBALS['webRoot'] = "http://" . $_SERVER['HTTP_HOST'] . "/";
 	include($GLOBALS['root'] . 'Utils/DomManager.php');
 	include($GLOBALS['root'] . 'Utils/GoogleAnalytics.php');
 	include($GLOBALS['root'] . 'Widgets/Group.php');
