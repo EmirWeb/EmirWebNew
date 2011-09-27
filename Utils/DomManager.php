@@ -25,7 +25,7 @@ class DomManager {
 				self::addCSS($value);
 			}
 		}else {
-			self::addToDom($GLOBALS['webRoot'] . $css, self::$cssKey);
+			self::addToDom($css, self::$cssKey);
 		}
 	}
 
@@ -35,7 +35,7 @@ class DomManager {
 				self::addScript($value);
 			}
 		}else {
-			self::addToDom($GLOBALS['webRoot'] . $script, self::$scriptKey);
+			self::addToDom($script, self::$scriptKey);
 		}
 	}
 

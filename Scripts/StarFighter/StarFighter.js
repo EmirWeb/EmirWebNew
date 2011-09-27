@@ -19,7 +19,7 @@ function StarFighter (){
 	var fireType = 0;
 	var maxHealth = 25;
 	var health = maxHealth;
-	var side = 0;								
+	var side = 0;			
 	
 	var keys = {
 		13: false,
@@ -84,7 +84,7 @@ function StarFighter (){
 	};
 	
 	var keyHandler = function (){	
-		if (keys[13]) // enter
+		if (keys[13] || keys[32]) // enter || space
 			fire();
 		if (keys[37]) // left
 			x = Math.max(0,x - speed);

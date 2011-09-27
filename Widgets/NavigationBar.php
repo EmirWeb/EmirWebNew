@@ -25,36 +25,46 @@
 DomManager::addCSS('CSS/Widgets/NavigationBar.css');
 
 class NavigationBar {
-	private static $TEXT = "Text";
-	private static $LINK = "Link";
-	private static $TITLE = "Title";
+	private static $TEXT = "text";
+	private static $LINK = "link";
+	private static $TITLE = "title";
+	private static $IS_CHOSEN = "isChosen";
 
 	static function getNavigationBar($buttons){
 		if (empty($buttons)){
 			$buttons = array(
-				self::getCell( $GLOBALS['webRoot'] . "Scholastic.php", "Scholastic","University of Toronto Class Websites"),
-				self::getCell( $GLOBALS['webRoot'] . "Files/Resume.pdf", "Resume", "Online Resume"),
-				self::getCell( $GLOBALS['webRoot'] , "Home", "Main Page")
+				self::getCell( "Scholastic.php", "Scholastic","University of Toronto Class Websites", false),
+				self::getCell("Files/Resume.pdf", "Resume", "Online Resume", false),
+				self::getCell( "/" , "Home", "Main Page", false)
 			);
 		}
-
-		$navigationBar = '<div class="NavigationBar">';
+		
+		$navigationBar = '<div class="NavigationBar"><div class="NavigationBarContainer"><div class="Title"><span>emir</span>web</div><div class="NavigationBarButtonContainer">';
+		
 		foreach ($buttons as $button){
+			if (!$button[self::$IS_CHOSEN]){
 			$navigationBar .=  '
 <a href="' . $button[self::$LINK] . '">
 	<div class="Button" title="' . $button[self::$TITLE] . '">
 		' . $button[self::$TEXT] . '
 	</div>
 </a>';
+			} else {
+				$navigationBar .=  '
+	<div class="Button Chosen" title="' . $button[self::$TITLE] . '">
+		' . $button[self::$TEXT] . '
+	</div>';
+			}
 		}
-		return $navigationBar . "\n</div>\n";
+		return $navigationBar . "\n</div></div></div>\n";
 	}
 
-	private static function getCell($link, $text, $title){
+	public static function getCell($link, $text, $title, $isChosen){
 		return array(
-		self::$LINK => $link,
-		self::$TEXT => $text,
-		self::$TITLE => $title
+			self::$LINK => $link,
+			self::$TEXT => $text,
+			self::$TITLE => $title,
+			self::$IS_CHOSEN => $isChosen
 		);
 	}
 }

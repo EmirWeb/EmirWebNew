@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+body {
+	position: relative;
+	background-color: #FFFFFF;
+	color: #787878;
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}

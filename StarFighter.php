@@ -1,10 +1,9 @@
 <?php
-	$GLOBALS['root'] = "";
-	$GLOBALS['webRoot'] = "http://" . $_SERVER['HTTP_HOST'] . "/";
-	include($GLOBALS['root'] . 'Utils/DomManager.php');
-	include($GLOBALS['root'] . 'Utils/GoogleAnalytics.php');
-	include($GLOBALS['root'] . 'Widgets/Group.php');
-	include($GLOBALS['root'] . 'Widgets/NavigationBar.php');
+	include('Utils/DomManager.php');
+	include('Utils/GoogleAnalytics.php');
+	include('Widgets/Group.php');
+	include('Widgets/NavigationBar.php');
+	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/StarFighter.css');
 	DomManager::addScript(array(
 			"Scripts/Utils/jquery-1.4.2.min.js",
@@ -33,22 +32,32 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<?php echo DomManager::getCSS(); ?>
-<?php echo '<script type="text/javascript">var URL = "' . $GLOBALS['webRoot'] . 'Images/StarFighter/";</script>'; ?>
-<?php echo DomManager::getScripts(); ?>
-</head>
-<body>
-<!-- 
-	All code by Emir Hasanbegovic, not for resale, the creators of the 
-	images have not provided consent for the images' use and should not 
-	be used or reproduced. 
--->
-<?php
-	
-	
-?>
-</body>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>EmirWeb</title>
+		<?php echo DomManager::getCSS(); ?>
+		<?php echo '<script type="text/javascript">var URL = "Images/StarFighter/"; var mainContainer = "#StarFighterContainer";</script>'; ?>
+		<?php echo DomManager::getScripts(); ?>
+	</head>
+	<body>
+		<?php echo NavigationBar::getNavigationBar(null);?>
+		<div class="Container">
+			<div class="Instructions">
+				<div class="InstructionsTitle">Instructions</div>
+				<strong>&larr;</strong> Left<br /> 
+				<strong>&rarr;</strong> Right<br />
+				<strong>&uarr;</strong> Up <br />
+				<strong>&darr;</strong> Down<br />
+				<strong>Space</strong> Shoot<br />
+				<strong>Enter</strong> Shoot<br />					
+			</div> 	
+			<div id="StarFighterContainer">
+			<!-- 
+				All code by Emir Hasanbegovic, not for resale, the creators of the 
+				images have not provided consent for the images' use and should not 
+				be used or reproduced. 
+			-->
+			</div>
+		</div>
+	</body>
 </html>

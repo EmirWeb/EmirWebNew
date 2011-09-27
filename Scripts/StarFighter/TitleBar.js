@@ -35,7 +35,7 @@ function TitleBar (){
 		titleBar.append(score);
 		titleBar.append(health);
 		
-		$('body').prepend(titleBar);
+		$(mainContainer).prepend(titleBar);
 	})();
 	
 	

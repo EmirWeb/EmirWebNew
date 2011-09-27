@@ -1,11 +1,52 @@
-body {
+div.InstructionsTitle {
+	color: #FF3000;
+	font-size: 30px;
+	line-height: 30px;		
+}
+
+div.Container {
+	position: relative;
+	width: 960px;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+div.Instructions {
+	position: relative;
+	float: left;
+	width: 200px;
+}
+div.Instructions strong{
+	width: 100px;
+	float: left;
+}
+
+#StarFighterContainer {
+	position: relative;
 	line-height:0px;
 	font-size: 0px;
+	float:left;
+	border: 0px;
+	padding: 0px;
+	margin: 0px auto;
+}
+
+#StarFighterContainer div.TitleBar {
+	color: #FFFFFF;											
+}
+#StarFighterContainer div.HealthBar {
+	clear: both;
+	line-height: 20px;
+	font-size: 20px;
 	margin: 0px;
 	border: 0px;
-	padding: 0px;			
+	padding: 0px;
 }
-body div.HealthBar {
+#StarFighterContainer div.Fps {
+	background-color: #222222;
+	color: #FFFFFF;
 	clear: both;
 	line-height: 20px;
 	font-size: 20px;
@@ -13,15 +54,7 @@ body div.HealthBar {
 	border: 0px;
 	padding: 0px;											
 }
-body div.Fps {
-	clear: both;
-	line-height: 20px;
-	font-size: 20px;
-	margin: 0px;
-	border: 0px;
-	padding: 0px;											
-}
-body div.Canvas div.Bullet {
+#StarFighterContainer div.Canvas div.Bullet {
 	position: absolute;
 	line-height:0px;
 	font-size: 0px;
@@ -29,7 +62,7 @@ body div.Canvas div.Bullet {
 	border: 0px;
 	padding: 0px;
 }
-body div.Canvas {
+#StarFighterContainer div.Canvas {
 	clear:both;
 	overflow: hidden;
 	position: relative;
@@ -40,7 +73,7 @@ body div.Canvas {
 	border: 0px;
 	padding: 0px;				
 }
-body div.Canvas div.Star {
+#StarFighterContainer div.Canvas div.Star {
 	background-color: #0000FF;
 	position:absolute;
 	line-height:0px;
@@ -49,7 +82,7 @@ body div.Canvas div.Star {
 	border: 0px;
 	padding: 0px;
 }
-body div.Canvas div.StarFighter {
+#StarFighterContainer div.Canvas div.StarFighter {
 	position:absolute;
 	line-height:0px;
 	font-size: 0px;
@@ -57,7 +90,7 @@ body div.Canvas div.StarFighter {
 	border: 0px;
 	padding: 0px;				
 }			
-body div.Canvas div.Enemy {
+#StarFighterContainer div.Canvas div.Enemy {
 	position:absolute;
 	line-height:0px;
 	font-size: 0px;
@@ -65,7 +98,7 @@ body div.Canvas div.Enemy {
 	border: 0px;
 	padding: 0px;				
 }
-body div.ScoreBoard {
+#StarFighterContainer div.ScoreBoard {
 	margin: 0px;
 	border: 0px;
 	padding: 0px;

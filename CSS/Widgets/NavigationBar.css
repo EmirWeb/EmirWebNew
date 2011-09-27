@@ -1,26 +1,62 @@
 div.NavigationBar {
 	position: relative;
 	width: 100%;
-	height: 42px;
-	background-color: #A4DD4A;
+	background-color: #F2F3F0;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
 }
 
-div.NavigationBar div.Button{
+div.NavigationBarContainer {
+	position: relative;
+	width: 960px;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+div.NavigationBar div.NavigationBarContainer div.NavigationBarButtonContainer {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+}
+
+div.NavigationBar div.NavigationBarContainer div.Title {
+	float: left;
+	color: #FA4100;
+	letter-spacing: -1px;
+	text-transform: lowercase;
+	font-size: 45px;
+	font-weight: normal;
+}
+
+div.NavigationBar div.NavigationBarContainer div.Title span{
+	color: #333333;
+}
+
+div.NavigationBar div.NavigationBarContainer div.Button{
 	position: relative;
 	float: right;
-	margin: 5px;
-	height: 30px;
-	line-height: 30px;
-	width: 128px;
+	margin: 0px 1px;
+	padding: 10px 15px 14px 15px;
 	font-weight: bold;
-	color: #AAAAAA;
-	background-color: #170d62;				
+	color: #FFFFFF;
+	background-color: #D8DBCD;				
 	text-align: center;
-	cursor: pointer;				
+	cursor: pointer;	
+	font-size: 13px;
+	font-weight: bold;			
+}
+div.NavigationBar div.NavigationBarContainer div.Chosen{
+	background-color: #F34600;
+	cursor: auto;
 }
 
-div.NavigationBar div.Button:hover{
+div.NavigationBar div.NavigationBarContainer a {
+	text-decoration: none;
+}
+
+div.NavigationBar div.NavigationBarContainer div.Button:hover{
 	position: relative;
-	background-color: #6157b0;
-	color: #DDDDDD;								
+	background-color: #F34600;
 }
