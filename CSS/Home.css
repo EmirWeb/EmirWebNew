@@ -1,7 +1,20 @@
 div.Content {
 	position: relative;
 	font-size: 12px;
-	top: 100px;
+	padding-top: 30px;
 	width: 960px;
 	margin: 0 auto;
+}
+
+div.Content div.SideBar {
+	position: relative;
+	width: 260px;
+	float: left;
+}
+
+div.Content div.Posts {
+	position: relative;
+	padding-left: 100px;
+	width: 600px;
+	float: right;
 }

@@ -19,7 +19,12 @@
 	<body>
 	
 		<?php
-			echo NavigationBar::getNavigationBar(null);
+			$buttons = array(
+				NavigationBar::getCell( "Scholastic.php", "Scholastic","University of Toronto Class Websites", true),
+				NavigationBar::getCell("Files/Resume.pdf", "Resume", "Online Resume", false),
+				NavigationBar::getCell( "/" , "Home", "Main Page", false)
+			);
+			echo NavigationBar::getNavigationBar($buttons); 
 			
 			$leftColomnGroups = array(
 				array(

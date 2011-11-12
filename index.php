@@ -1,8 +1,9 @@
 <?php
 	include('Utils/DomManager.php');
 	include('Utils/GoogleAnalytics.php');
-	include('Widgets/Group.php');
+	include('Widgets/Post.php');
 	include('Widgets/NavigationBar.php');
+	include('Widgets/Twitter.php');
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/Home.css');
 	DomManager::addScript('Scripts/Home.js');
@@ -13,7 +14,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>EmirWeb</title>
-		<?php echo DomManager::getCSS(); ?>
+		<?php echo DomManager::getCSS(); ?>		
 		<?php echo DomManager::getScripts(); ?>
 	</head>
 	<body>
@@ -26,24 +27,17 @@
 			echo NavigationBar::getNavigationBar($buttons); 
 		?>
 		<div class="Content">
-		<?php
-			$groups = array(
-				array(
-					'Title' => 'Current News',
-					'Row' => array (
-						array(
-							'Label' => 'October 12, 2010:',
-							'Text' => '<a href="StarFighter.php">StarFighter (JavaScript)</a> available online for first time.'				
-						),
-						array(
-							'Label' => 'October 12, 2010:',
-							'Text' => 'New website layout!'				
-						)
-					)
-				)
-			);
-		 	echo Group::getGroups($groups); 
-		?>
+			<div class="SideBar">
+				<?php 
+					Twitter::getTwitter();
+				?>
+			</div>
+			<div class="Posts">
+				<?php		
+					$post = Post::getPostModel('Current News','October 12, 2010:','<a href="StarFighter.php">StarFighter (JavaScript)</a> available online for first time.');
+				 	echo Post::getPost($post); 
+				?>
+			</div>
 		</div>
 	</body>
 </html>
