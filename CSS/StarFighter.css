@@ -1,16 +1,29 @@
 div.InstructionsTitle {
 	color: #FF3000;
 	font-size: 30px;
-	line-height: 30px;		
+	line-height: 30px;
 }
 
 div.Container {
 	position: relative;
 	width: 960px;
-	padding: 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
+	padding-bottom: 40px;
+}
+
+div.Container div.Divider {
+	clear: both;
+}
+
+div.Details {
+	clear: both;
+	font-size: 12px;
+	color: #A19D9A;
 }
 
 div.Instructions {
@@ -18,24 +31,36 @@ div.Instructions {
 	float: left;
 	width: 200px;
 }
-div.Instructions strong{
+
+div.Instructions strong {
 	width: 100px;
 	float: left;
 }
 
+div.Content {
+	position: relative;
+	float: left;
+	border: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	width: 700px;
+}
+
 #StarFighterContainer {
 	position: relative;
-	line-height:0px;
+	line-height: 0px;
 	font-size: 0px;
-	float:left;
-	border: 0px;
-	padding: 0px;
+	float: left;
 	margin: 0px auto;
+	padding-bottom: 40px;
+	border-bottom: 1px dotted #E7E2DC;	
 }
 
 #StarFighterContainer div.TitleBar {
-	color: #FFFFFF;											
+	color: #FFFFFF;
 }
+
 #StarFighterContainer div.HealthBar {
 	clear: both;
 	line-height: 20px;
@@ -44,6 +69,7 @@ div.Instructions strong{
 	border: 0px;
 	padding: 0px;
 }
+
 #StarFighterContainer div.Fps {
 	background-color: #222222;
 	color: #FFFFFF;
@@ -52,52 +78,58 @@ div.Instructions strong{
 	font-size: 20px;
 	margin: 0px;
 	border: 0px;
-	padding: 0px;											
+	padding: 0px;
 }
+
 #StarFighterContainer div.Canvas div.Bullet {
 	position: absolute;
-	line-height:0px;
+	line-height: 0px;
 	font-size: 0px;
 	margin: 0px;
 	border: 0px;
 	padding: 0px;
 }
+
 #StarFighterContainer div.Canvas {
-	clear:both;
+	clear: both;
 	overflow: hidden;
 	position: relative;
 	background-color: #000000;
-	line-height:0px;
-	font-size: 0px;
-	margin: 0px;
-	border: 0px;
-	padding: 0px;				
-}
-#StarFighterContainer div.Canvas div.Star {
-	background-color: #0000FF;
-	position:absolute;
-	line-height:0px;
+	line-height: 0px;
 	font-size: 0px;
 	margin: 0px;
 	border: 0px;
 	padding: 0px;
 }
-#StarFighterContainer div.Canvas div.StarFighter {
-	position:absolute;
-	line-height:0px;
+
+#StarFighterContainer div.Canvas div.Star {
+	background-color: #0000FF;
+	position: absolute;
+	line-height: 0px;
 	font-size: 0px;
 	margin: 0px;
 	border: 0px;
-	padding: 0px;				
-}			
-#StarFighterContainer div.Canvas div.Enemy {
-	position:absolute;
-	line-height:0px;
-	font-size: 0px;
-	margin: 0px;
-	border: 0px;
-	padding: 0px;				
+	padding: 0px;
 }
+
+#StarFighterContainer div.Canvas div.StarFighter {
+	position: absolute;
+	line-height: 0px;
+	font-size: 0px;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+#StarFighterContainer div.Canvas div.Enemy {
+	position: absolute;
+	line-height: 0px;
+	font-size: 0px;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
 #StarFighterContainer div.ScoreBoard {
 	margin: 0px;
 	border: 0px;

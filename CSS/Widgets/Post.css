@@ -2,13 +2,11 @@ div.Post div.Html {
 	text-align: justify;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
-	color: #A19D9A
+	color: #A19D9A;
+	padding-bottom: 20px;
+	line-height: 180%;
 }
 
-div.Post div.Html a {
-	text-decoration: none;
-	color: #FF3000;
-}
 
 div.Post div.Date {
 	font-family: Arial, Helvetica, sans-serif;

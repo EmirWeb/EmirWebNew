@@ -34,7 +34,7 @@
 			</div>
 			<div class="Posts">
 				<?php		
-					$post = Post::getPostModel('Current News','October 12, 2010:','<a href="StarFighter.php">StarFighter (JavaScript)</a> available online for first time.');
+					$post = Post::getPostModel('First Post','October 12, 2010:','StarFighter (JavaScript) available online for first time. This game was designed to show case the web development knowledge I had acquired while working with <a href="http://www.visibli.com"  target="_blank">Visibli</a>. One of the things to note is the async loop class. It demostrates how scope and threading works in JavaScript.', "StarFighter.php");
 				 	echo Post::getPost($post); 
 				?>
 			</div>

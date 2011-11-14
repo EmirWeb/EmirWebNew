@@ -5,6 +5,8 @@ class Post {
 	private static $DATE = "Date";
 	private static $HTML = "Html";
 	private static $POST = "Post";
+	private static $READ_MORE_LINK = "ReadMoreLink";
+	private static $READ_MORE_TEXT = "Read More";
 
 	static function getPost($post){
 		if (empty($post)){
@@ -34,14 +36,22 @@ class Post {
 			}
 		}
 
+		if (isset($post[self::$READ_MORE_LINK])){
+			$readMoreLink = $post[self::$READ_MORE_LINK];
+			if (!empty($readMoreLink)){
+				$ret .= '<a href="' . $readMoreLink . '">' . self::$READ_MORE_TEXT . '</a>';
+			}
+		}
+
 		return $ret . '</div>';
 	}
 
-	public static function getPostModel($title, $date, $html){
+	public static function getPostModel($title, $date, $html, $readMoreLink){
 		return array(
-			self::$TITLE => $title,
-			self::$DATE => $date,
-			self::$HTML => $html
+		self::$TITLE => $title,
+		self::$DATE => $date,
+		self::$HTML => $html,
+		self::$READ_MORE_LINK => $readMoreLink
 		);
 	}
 }

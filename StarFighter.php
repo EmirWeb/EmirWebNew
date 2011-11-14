@@ -51,13 +51,22 @@
 				<strong>Space</strong> Shoot<br />
 				<strong>Enter</strong> Shoot<br />					
 			</div> 	
-			<div id="StarFighterContainer">
-			<!-- 
-				All code by Emir Hasanbegovic, not for resale, the creators of the 
-				images have not provided consent for the images' use and should not 
-				be used or reproduced. 
-			-->
+			<div class="Content">
+				<div id="StarFighterContainer" />
+				<!-- 
+					All code by Emir Hasanbegovic, not for resale, the creators of the 
+					images have not provided consent for the images' use and should not 
+					be used or reproduced. 
+				-->
+				</div>
+				<div class="Divider"></div>
+				<div class="Details">
+					<p>Star Fighter (JavaScript) was written in regular HTML and CSS, not HTML5 and CSS3. This was an attempt to test modern day browsers' ability to run a basic 2D game enginge.</p>
+					<p>A personal goal in this project was to do all the work through Object Oriented JavaScript. The basic rules followed were: Every container on the page was represented by a class, each class would contain a reference to the dom object it was representing and it was manipulated. All the work to add every object including the actual game itself should be done through JavaScript.</p> 
+					<p>This was originally based off of a game I made in high school that was written in QBasic <a href="Files/StarFighter.zip">StarFighter V2.05</a></p>
+				</div>
 			</div>
 		</div>
+	
 	</body>
 </html>
