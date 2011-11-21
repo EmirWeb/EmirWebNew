@@ -13,6 +13,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>EmirWeb</title>
+		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
 		<?php echo DomManager::getScripts(); ?>
 	</head>

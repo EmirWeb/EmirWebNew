@@ -39,7 +39,7 @@ class NavigationBar {
 			);
 		}
 		
-		$navigationBar = '<div class="NavigationBar"><div class="NavigationBarContainer"><div class="Title"><span>emir</span>web</div><div class="NavigationBarButtonContainer">';
+		$navigationBar = '<div class="NavigationBar"><div class="NavigationBarContainer"><div class="Title"><img class="Icon" src="favicon.ico" height="35px"><span>emir</span>web</div><div class="NavigationBarButtonContainer">';
 		
 		foreach ($buttons as $button){
 			if (!$button[self::$IS_CHOSEN]){
