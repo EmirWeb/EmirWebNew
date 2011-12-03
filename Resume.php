@@ -36,6 +36,7 @@
 				<a href="http://www.twitter.com/ajelive">@PhiGammEmir</a><br/>
 			</div>
 		</div>
+		
 		<div class="Content">
 			<h1>Highlights of Qualifications</h1>
 			<p>Hardworking, reliable and friendly yet professional individual. Fluently Bilingual (English-French). </p>
@@ -113,7 +114,6 @@
 				<li> Completed high school with a French immersion diploma (Knew French fluently before completing the French immersion program)</li>
 				<li>4 years in French speaking elementary schools and middle schools in Québec. </li>   
 			</ul>
-			 
 		</div>
 	</body>
 </html>

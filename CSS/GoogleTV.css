@@ -1,0 +1,34 @@
+div.Container {
+	position: relative;
+	width: 960px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding-bottom: 40px;
+}
+
+div.Container div.TableOfContents {
+	font-size: 12px;
+	width: 200px;
+	float: left;
+	width: 200px;
+}
+
+div.Container div.Essay {
+	padding: 0px 20px;
+	width: 720px;
+	float: left;
+	text-align: justify;
+}
+
+h1, h2 {
+	text-align:center;
+	color: #FF3000;
+}
+
+code {
+	font-size: 12px;	
+}

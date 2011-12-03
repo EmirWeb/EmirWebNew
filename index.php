@@ -35,8 +35,17 @@
 			</div>
 			<div class="Posts">
 				<?php		
-					$post = Post::getPostModel('First Post','October 12, 2010:','StarFighter (JavaScript) available online for first time. This game was designed to show case the web development knowledge I had acquired while working with <a href="http://www.visibli.com"  target="_blank">Visibli</a>. One of the things to note is the async loop class. It demostrates how scope and threading works in JavaScript.', "StarFighter.php");
-				 	echo Post::getPost($post); 
+					$posts = array(
+						Post::getPostModel('First Google TV app','December 2, 2011:','Open sourced some of the work I did for Google TV using the <a href="http://www.canada.com">canada.com</a> apis and <a href="http://www.bing.com/images">Bing images</a> apis. Source code and platform overview available.', "GoogleTV.php"),
+						Post::getPostModel('New design','December 2, 2011:','I\'ve been working hard to get this new design out. <p>COPYRIGHT (C) 2008 SITENAME.COM. ALL RIGHTS RESERVED. DESIGN BY CSS TEMPLATES.</p>', null),
+						Post::getPostModel('First Post','October 12, 2010:','StarFighter (JavaScript) available online for first time. This game was designed to show case the web development knowledge I had acquired while working with <a href="http://www.visibli.com"  target="_blank">Visibli</a>. One of the things to note is the async loop class. It demostrates how scope and threading works in JavaScript.', "StarFighter.php")
+						
+					); 
+					
+					
+					foreach ($posts as $post){
+				 		echo Post::getPost($post);
+					} 
 				?>
 			</div>
 		</div>
