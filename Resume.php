@@ -1,6 +1,8 @@
 <?php
 	include('Utils/DomManager.php');
 	include('Utils/GoogleAnalytics.php');
+	include('Utils/Utilities.php');
+	include('Utils/Facebook.php');
 	include('Widgets/Post.php');
 	include('Widgets/NavigationBar.php');
 	include('Widgets/Twitter.php');
@@ -21,7 +23,6 @@
 	<body>
 		<?php 
 			$buttons = array(
-				NavigationBar::getCell( "Scholastic.php", "Scholastic","University of Toronto Class Websites", false),
 				NavigationBar::getCell("Files/Resume.pdf", "Resume", "Online Resume", true),
 				NavigationBar::getCell( "/" , "Home", "Main Page", false)
 			);
@@ -29,15 +30,18 @@
 		?>
 		
 		<div class="Card">
-			<div class="Logo"><img  src="favicon.ico" height="45px"></div>
+			<div class="Logo"><img  src="favicon.ico" height="60px"></div>
 			<div class="Info">
 				<h3>Emir Hasanbegovic</h3>
-				<a href="http://www.twitter.com/ajelive">@PhiGammEmir</a><br/>
-				<a href="http://www.twitter.com/ajelive">@PhiGammEmir</a><br/>
+				<a href="http://www.twitter.com/ajelive">Twitter: @PhiGammEmir</a><br/>
+				<a href="mailto:emir@emirweb.com">E-mail: emir@emirweb.com</a><br />
+				<a href="http://ca.linkedin.com/pub/emir-hasanbegovic/2b/43a/62a">Linked in</a><br/>
+				<a href="https://www.facebook.com/ehasanbegovic">Facebook</a><br/>
 			</div>
 		</div>
 		
 		<div class="Content">
+			<?php echo Facebook::getFacebookLike(Utilities::getCurrentPageURL(), "200"); ?>
 			<h1>Highlights of Qualifications</h1>
 			<p>Hardworking, reliable and friendly yet professional individual. Fluently Bilingual (English-French). </p>
 			<h2>Employment</h2>
@@ -115,5 +119,6 @@
 				<li>4 years in French speaking elementary schools and middle schools in Québec. </li>   
 			</ul>
 		</div>
+		<?php echo Facebook::getFacebookRoot();?>
 	</body>
 </html>

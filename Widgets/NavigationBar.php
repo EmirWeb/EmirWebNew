@@ -33,8 +33,7 @@ class NavigationBar {
 	static function getNavigationBar($buttons){
 		if (empty($buttons)){
 			$buttons = array(
-				self::getCell( "Scholastic.php", "Scholastic","University of Toronto Class Websites", false),
-				self::getCell("Files/Resume.pdf", "Resume", "Online Resume", false),
+				self::getCell("Resume.php", "Resume", "Online Resume", false),
 				self::getCell( "/" , "Home", "Main Page", false)
 			);
 		}

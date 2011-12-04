@@ -1,8 +1,10 @@
 <?php
 	include('Utils/DomManager.php');
+	include('Utils/Utilities.php');
 	include('Utils/GoogleAnalytics.php');
 	include('Widgets/Group.php');
 	include('Widgets/NavigationBar.php');
+	include('Utils/Facebook.php');
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/StarFighter.css');
 	DomManager::addScript(array(
@@ -50,7 +52,7 @@
 				<strong>&uarr;</strong> Up <br />
 				<strong>&darr;</strong> Down<br />
 				<strong>Space</strong> Shoot<br />
-				<strong>Enter</strong> Shoot<br />					
+				<strong>Enter</strong> Shoot<br />
 			</div> 	
 			<div class="Content">
 				<div id="StarFighterContainer" />
@@ -61,13 +63,15 @@
 				-->
 				</div>
 				<div class="Divider"></div>
+				<?php echo Facebook::getFacebookLike(Utilities::getCurrentPageURL(), "200"); ?>
 				<div class="Details">
 					<p>Star Fighter (JavaScript) was written in regular HTML and CSS, not HTML5 and CSS3. This was an attempt to test modern day browsers' ability to run a basic 2D game enginge.</p>
 					<p>A personal goal in this project was to do all the work through Object Oriented JavaScript. The basic rules followed were: Every container on the page was represented by a class, each class would contain a reference to the dom object it was representing and it was manipulated. All the work to add every object including the actual game itself should be done through JavaScript.</p> 
-					<p>This was originally based off of a game I made in high school that was written in QBasic <a href="Files/StarFighter.zip">StarFighter V2.05</a></p>
+					<p>This was originally based off of a game I made in high school that was written in QBasic <a href="Files/StarFighter.zip">StarFighter V2.05</a></p><br/>
 				</div>
+				<?php echo Facebook::getFacebookComments(Utilities::getCurrentPageURL(), "700", "2"); ?>
 			</div>
 		</div>
-	
+		<?php echo Facebook::getFacebookRoot();?>
 	</body>
 </html>
