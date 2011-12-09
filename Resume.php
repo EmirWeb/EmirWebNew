@@ -1,11 +1,10 @@
 <?php
-	include('Utils/DomManager.php');
-	include('Utils/GoogleAnalytics.php');
-	include('Utils/Utilities.php');
-	include('Utils/Facebook.php');
-	include('Widgets/Post.php');
-	include('Widgets/NavigationBar.php');
-	include('Widgets/Twitter.php');
+	include_once('Utils/DomManager.php');
+	include_once('Utils/GoogleAnalytics.php');
+	include_once('Utils/Utilities.php');
+	include_once('Utils/Facebook.php');
+	include_once('Utils/Social.php');
+	include_once('Widgets/NavigationBar.php');
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/Resume.css');
 	DomManager::addScript('Scripts/Home.js');
@@ -38,10 +37,11 @@
 				<a href="http://ca.linkedin.com/pub/emir-hasanbegovic/2b/43a/62a">Linked in</a><br/>
 				<a href="https://www.facebook.com/ehasanbegovic">Facebook</a><br/>
 			</div>
+			<?php echo Social::getSocialBar(); ?>
 		</div>
 		
 		<div class="Content">
-			<?php echo Facebook::getFacebookLike(Utilities::getCurrentPageURL(), "200"); ?>
+			
 			<h1>Highlights of Qualifications</h1>
 			<p>Hardworking, reliable and friendly yet professional individual. Fluently Bilingual (English-French). </p>
 			<h2>Employment</h2>

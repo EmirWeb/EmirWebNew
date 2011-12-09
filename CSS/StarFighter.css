@@ -2,7 +2,14 @@ div.InstructionsTitle {
 	color: #FF3000;
 	font-size: 30px;
 	line-height: 30px;
+	text-align: center;
 }
+
+h1, h2 {
+	text-align:center;
+	color: #FF3000;
+}
+
 
 div.Container {
 	position: relative;
@@ -29,22 +36,35 @@ div.Details {
 div.Instructions {
 	position: relative;
 	float: left;
-	width: 200px;
+	width: 300px;
 }
 
-div.Instructions strong {
-	width: 100px;
+div.Instructions div.Facebook{
+	padding-top: 20px;
+	clear:both;
+}
+
+div.Instructions div.Left {
 	float: left;
+}
+
+div.Instructions div.Right {
+	float: right;
+}
+
+div.Instructions div.Instruction {
+	width: 300px;
+	clear: both;
 }
 
 div.Content {
 	position: relative;
-	float: left;
+	float: right;
 	border: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
 	padding-top: 0px;
-	width: 700px;
+	width: 600px;
 }
 
 #StarFighterContainer {

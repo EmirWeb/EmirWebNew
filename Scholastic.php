@@ -1,8 +1,8 @@
 <?php
-	include('Utils/DomManager.php');
-	include('Utils/GoogleAnalytics.php');
-	include('Widgets/Group.php');
-	include('Widgets/NavigationBar.php');
+	include_once('Utils/DomManager.php');
+	include_once('Utils/GoogleAnalytics.php');
+	include_once('Widgets/Group.php');
+	include_once('Widgets/NavigationBar.php');
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/Scholastic.css');
 	DomManager::addCSS('Scripts/Scholastic.js');

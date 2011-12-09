@@ -1,4 +1,6 @@
 <?php
+include_once('Utils/DomManager.php');
+include_once('Utils/Social.php');
 DomManager::addCss('CSS/Widgets/Post.css');
 class Post {
 	private static $TITLE = "Title";
@@ -7,18 +9,41 @@ class Post {
 	private static $POST = "Post";
 	private static $READ_MORE_LINK = "ReadMoreLink";
 	private static $READ_MORE_TEXT = "Read More";
+	private static $TWITTER = "Twitter";
 
 	static function getPost($post){
 		if (empty($post)){
 			return;
 		}
+		
+		if (isset($post[self::$READ_MORE_LINK])){
+			$readMoreLink = $post[self::$READ_MORE_LINK];
+		}
+		
 
 		$ret = '<div class="' . self::$POST . '">';
 
 		if (isset($post[self::$TITLE])){
 			$title = $post[self::$TITLE];
 			if (!empty($title)){
-				$ret .= '<div class="' . self::$TITLE . '">' . $title . '</div>';
+				$ret .= '<div class="' . self::$TITLE . '">';
+				if (!empty($readMoreLink)){
+					$ret .= '<a href="' . $readMoreLink . '">' . $title . '</a> ';
+
+					if (!empty($readMoreLink)){
+						
+						$absoluteURL = Utilities::getURL("/" . $readMoreLink);
+						$ret .= Social::getSocialBarWithUrl($absoluteURL, $title);
+						
+// 						$ret .= LinkedIn::getLinkedInForUrl($absoluteURL);
+// 						$ret .= Twitter::getTweetButtonHorizontal($absoluteURL, $title);
+// 						$ret .= GooglePlus::getPlusOneWithUrl($absoluteURL);
+					}
+						
+					$ret .= '</div>';
+				} else {
+					$ret .= $title . '</div>';
+				}
 			}
 		}
 
@@ -36,11 +61,8 @@ class Post {
 			}
 		}
 
-		if (isset($post[self::$READ_MORE_LINK])){
-			$readMoreLink = $post[self::$READ_MORE_LINK];
-			if (!empty($readMoreLink)){
-				$ret .= '<a href="' . $readMoreLink . '">' . self::$READ_MORE_TEXT . '</a>';
-			}
+		if (!empty($readMoreLink)){
+			$ret .= '<div class="' . self::$READ_MORE_LINK . '"><a href="' . $readMoreLink . '">' . self::$READ_MORE_TEXT . '</a></div>';
 		}
 
 		return $ret . '</div>';

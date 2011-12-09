@@ -12,14 +12,13 @@ div.Container {
 
 div.Container div.TableOfContents {
 	font-size: 12px;
-	width: 200px;
+	width: 300px;
 	float: left;
-	width: 200px;
 }
 
 div.Container div.Essay {
 	padding: 0px 20px;
-	width: 720px;
+	width: 620px;
 	float: left;
 	text-align: justify;
 }

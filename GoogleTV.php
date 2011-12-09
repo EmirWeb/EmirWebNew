@@ -1,12 +1,14 @@
 <?php
-	include('Utils/DomManager.php');
-	include('Utils/GoogleAnalytics.php');
-	include('Utils/Utilities.php');
-	include('Utils/Facebook.php');
-	include('Widgets/Group.php');
-	include('Widgets/NavigationBar.php');
+	include_once('Utils/DomManager.php');
+	include_once('Utils/GoogleAnalytics.php');
+	include_once('Utils/Utilities.php');
+	include_once('Utils/Facebook.php');
+	include_once('Utils/Social.php');
+	include_once('Widgets/Group.php');
+	include_once('Widgets/NavigationBar.php');
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/GoogleTV.css');
+	DomManager::addCSS('CSS/Social.css');
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -17,12 +19,13 @@
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
 		<?php echo DomManager::getScripts(); ?>
+		<?php echo Facebook::getFacebookArticleHead("Google TV"); ?>
 	</head>
 	<body>
 		<?php echo NavigationBar::getNavigationBar(null);?>
 		<div class="Container">
 			<div class="TableOfContents">
-				<?php echo Facebook::getFacebookLike(Utilities::getCurrentPageURL(), "200"); ?>
+				<?php  echo Social::getSocialBar(); ?>
 				<h2>Google TV review and tutorial</h2>
 				<ol>
 					<li>
@@ -47,7 +50,7 @@
 				</ol>
 
 			
-			<?php echo Facebook::getFacebookComments(Utilities::getCurrentPageURL(), "200", "3")?>
+			<?php echo Facebook::getFacebookComments(Utilities::getCurrentPageURL(), "300", "3")?>
 			</div>
 			<div class="Essay">
 				
@@ -227,7 +230,7 @@ The example below will start a video feed (including flv's).
 				
 				<h2 id="OpenSource">Open Source</h2>
 				<p>
-					<a href="https://github.com/EmirWeb/Canada-TV">This</a> is some of the Google TV work that 
+					<a href="https://github.com/EmirWeb/Canada-TV">Click here</a> to see some of the Google TV work that 
 					I have done. It uses <a href="http://www.canada.com">canada.com</a> APIs and 
 					<a hreaf="http://www.bing.com/images">Bing image</a> APIs to bring Canadians a TV guide. 
 				</p>

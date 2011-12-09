@@ -22,6 +22,7 @@
  *		)
  * );
  */
+include_once('Utils/DomManager.php');
 DomManager::addCSS('CSS/Widgets/NavigationBar.css');
 
 class NavigationBar {

@@ -27,3 +27,11 @@ div.Post {
 	padding: 20px 0px;
 	border-bottom: 1px dotted #E7E2DC;
 }
+
+div.Post div.ReadMoreLink {
+	float: left;
+}
+
+div.Post div.Twitter {
+	float: left;
+}

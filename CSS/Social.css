@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+div.Social {
+	float: right;
+}
+
+div.Social div.Button {
+	margin-right: 10px;
+	margin-bottom: 5px;
+	float: left;
+}

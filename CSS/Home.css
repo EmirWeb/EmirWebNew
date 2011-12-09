@@ -8,13 +8,13 @@ div.Content {
 
 div.Content div.SideBar {
 	position: relative;
-	width: 260px;
+	width: 300px;
 	float: left;
 }
 
 div.Content div.Posts {
 	position: relative;
-	padding-left: 100px;
 	width: 600px;
 	float: right;
 }
+

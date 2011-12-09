@@ -1,7 +1,7 @@
 /**
  * By Emir Hasanbegovic
  */
-var RESOLUTION_WIDTH = 700;
+var RESOLUTION_WIDTH = 600;
 var RESOLUTION_HEIGHT = 290;
 function Canvas(width, height) {
 	var width = parseInt(width);

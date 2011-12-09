@@ -1,4 +1,5 @@
 <?php
+include_once('Utils/DomManager.php');
 DomManager::addCss('CSS/Widgets/Group.css');
 class Group {
 	private static $TITLE = "Title";

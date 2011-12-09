@@ -31,5 +31,24 @@ class Utilities {
 
 		return self::$curPageURL;
 	}
+	
+	public static function getURL($requestUri) {
+			$url = self::$HTTP;
+	
+			if (isset($_SERVER[self::$HTTPS]) && $_SERVER[self::$HTTPS] == self::$HTTPS_ON) {
+				$url .= self::$S;
+			}
+	
+			$url .= self::$CSS;
+	
+			if ($_SERVER[self::$SERVER_PORT] != self::$SERVER_PORT_80) {
+				$url .= $_SERVER[self::$SERVER_NAME] . ":" . $_SERVER[self::$SERVER_PORT] . $requestUri;
+			} else {
+				$url .= $_SERVER[self::$SERVER_NAME].$requestUri;
+			}
+	
+		return $url;
+	}
+	
 }
 ?>
