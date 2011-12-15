@@ -1,5 +1,4 @@
 <?php
-
 class DomManager {
 
 	private static $cssKey = 'CSS';
