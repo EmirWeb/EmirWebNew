@@ -3,6 +3,9 @@ include_once('Utils/DomManager.php');
 include_once('Utils/Social.php');
 DomManager::addCss('CSS/Widgets/Post.css');
 class Post {
+	private static $YEAR = "Year";
+	private static $MONtH = "Month";
+	private static $DAY = "Day";
 	private static $TITLE = "Title";
 	private static $DATE = "Date";
 	private static $HTML = "Html";
@@ -15,11 +18,11 @@ class Post {
 		if (empty($post)){
 			return;
 		}
-		
+
 		if (isset($post[self::$READ_MORE_LINK])){
 			$readMoreLink = $post[self::$READ_MORE_LINK];
 		}
-		
+
 
 		$ret = '<div class="' . self::$POST . '">';
 
@@ -31,15 +34,15 @@ class Post {
 					$ret .= '<a href="' . $readMoreLink . '">' . $title . '</a> ';
 
 					if (!empty($readMoreLink)){
-						
+
 						$absoluteURL = Utilities::getURL("/" . $readMoreLink);
-						$ret .= Social::getSocialBarWithUrl($absoluteURL, $title);
-						
-// 						$ret .= LinkedIn::getLinkedInForUrl($absoluteURL);
-// 						$ret .= Twitter::getTweetButtonHorizontal($absoluteURL, $title);
-// 						$ret .= GooglePlus::getPlusOneWithUrl($absoluteURL);
+						$ret .= Social::getSocialBar();//$absoluteURL, $title);
+
+						// 						$ret .= LinkedIn::getLinkedInForUrl($absoluteURL);
+						// 						$ret .= Twitter::getTweetButtonHorizontal($absoluteURL, $title);
+						// 						$ret .= GooglePlus::getPlusOneWithUrl($absoluteURL);
 					}
-						
+
 					$ret .= '</div>';
 				} else {
 					$ret .= $title . '</div>';
@@ -50,7 +53,8 @@ class Post {
 		if (isset($post[self::$DATE])){
 			$date = $post[self::$DATE];
 			if (!empty($date)){
-				$ret .= '<div class="' . self::$DATE . '">' . $date . '</div>';
+				$dateString = date('l jS \of F Y', $date);
+				$ret .= '<div class="' . self::$DATE . '">' . $dateString . '</div>';
 			}
 		}
 
@@ -68,7 +72,7 @@ class Post {
 		return $ret . '</div>';
 	}
 
-	public static function getPostModel($title, $date, $html, $readMoreLink){
+	public static function getPostModel($title, $date, $html, $readMoreLink, $year, $month, $day){
 		return array(
 		self::$TITLE => $title,
 		self::$DATE => $date,
@@ -76,5 +80,18 @@ class Post {
 		self::$READ_MORE_LINK => $readMoreLink
 		);
 	}
+
+	public static function cmp($post1, $post2) {
+		$date1 = $post1[self::$DATE];
+		$date2 = $post2[self::$DATE];
+		if ($date1 == $date2) {
+			return 0;
+		}else if ($date1 < $date2) {
+			return 1;
+		}
+			
+		return -1;
+	}
+
 }
 ?>

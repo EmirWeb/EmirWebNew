@@ -24,6 +24,7 @@ class Social {
 		.'</div>
 			<div class="Clear"></div>
 		</div>
+		<div class="Clear"></div>
 		';
 	}
 
@@ -32,19 +33,20 @@ class Social {
 			<div class="Social">
 				<div class="Button">' .
 		Twitter::getTweetButtonWithUrl($url, $title)
-		. '</div>
+			. '</div>
 				<div class="Button">'.
 		LinkedIn::getLinkedInForUrl($url)
-		.'</div>
+			. '</div>
 				<div class="Button">'.
 		GooglePlus::getPlusOneWithUrl($url)
 		.'</div>
+				<div class="Button">'.
+			Facebook::getFacebookLike($url)
+			.'</div>
 				<div class="Clear"></div>
 			</div>
+			<div class="Clear"></div>
 			';
-		//		<div class="Button">'.
-		//Facebook::getFacebookLikeWithUrl($href)
-		//.'</div>
 	}
 
 }
