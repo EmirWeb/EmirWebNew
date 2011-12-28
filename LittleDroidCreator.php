@@ -19,19 +19,25 @@ DomManager::addCSS('CSS/Social.css');
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
 		<?php echo DomManager::getScripts(); ?>
-		<?php echo Facebook::getFacebookArticleHead("Google TV"); ?>
+		<?php echo Facebook::getFacebookArticleHead("Little Droid Creator"); ?>
 	</head>
 	<body>
-
-
-<?php echo NavigationBar::getNavigationBar(null);?>
+	<?php
+		$buttons = array(
+			NavigationBar::getCell("About.php", "About", "About", false),
+			NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
+			NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
+			NavigationBar::getCell( "/" , "Home", "Main Page", false)
+		);
+		echo NavigationBar::getNavigationBar($buttons);
+	?>
 	<div class="Container">
 		<div class="TableOfContents">
 			
 			
 		<?php  echo Social::getSocialBar(); ?>
 			
-			<h2>Little Droid Creator</h2>
+			<h2><a href="https://market.android.com/details?id=com.littledroid">Little Droid Creator</a></h2>
 			<ul>
 				<li><a href="#Header1">High Level</a></li>
 				<li><a href="#Header2">Technical Structure</a></li>
@@ -50,16 +56,14 @@ DomManager::addCSS('CSS/Social.css');
 			<?php echo Facebook::getFacebookComments(Utilities::getCurrentPageURL(), "300", "3")?>
 			</div>
 		<div class="Essay">
-
-
-
-
-			<h1 id="Title"><img  height="48px" src="Images/LittleDroidCreator/icon.png"/>Litte Droid Creator</h1>
+			<h1 id="Title"><a href="https://market.android.com/details?id=com.littledroid"><img  height="48px" src="Images/LittleDroidCreator/icon.png"/>Litte Droid Creator</a></h1>
 			<p>Little Droid Creator was designed to showcase the dynamic engine
 				on which it runs. This document will first describe at a high level
 				what the game offers then we will dig down into the technical
 				aspects of the program and talk about how it offers the high level
 				aspects.</p>
+			<p><a href="https://market.android.com/details?id=com.littledroid">Download from market</a> |
+			<a href="https://github.com/EmirWeb/little_physics">Download source code</a></p>
 			<img class="ScreenShot" width="600px" src="Images/LittleDroidCreator/screenshot1.png"/>
 			<h2 id="Header1">High Level</h2>
 			<p>The idea of the application is to allow users to interactively
@@ -195,11 +199,7 @@ DomManager::addCSS('CSS/Social.css');
 				that can later be extended to a full game maker where the world has
 				as few limitations as possible.</p>
 		</div>
-
 	</div>
-	
-	
-	
 	
 		<?php echo Facebook::getFacebookRoot();?>
 	</body>

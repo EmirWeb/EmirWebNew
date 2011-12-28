@@ -26,9 +26,9 @@
 		<?php 
 			$buttons = array(
 				NavigationBar::getCell("About.php", "About", "About", false),
-				NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
+				NavigationBar::getCell("Projects.php", "Projects", "Projects", true),
 				NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
-				NavigationBar::getCell( "/" , "Home", "Main Page", true)
+				NavigationBar::getCell( "/" , "Home", "Main Page", false)
 			);
 			echo NavigationBar::getNavigationBar($buttons); 
 		?>
@@ -48,7 +48,7 @@
 			</div>
 			<div class="Posts">
 				<?php		
-					$posts = Data::getAllPosts(); 
+					$posts = Data::getProjectPosts(); 
 					
 					foreach ($posts as $post){
 				 		echo Post::getPost($post);

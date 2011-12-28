@@ -42,9 +42,18 @@
 		<?php echo DomManager::getCSS(); ?>
 		<?php echo '<script type="text/javascript">var URL = "Images/StarFighter/"; var mainContainer = "#StarFighterContainer";</script>'; ?>
 		<?php echo DomManager::getScripts(); ?>
+		<?php echo Facebook::getFacebookArticleHead("StarFighter (JavaScript)"); ?>
 	</head>
 	<body>
-		<?php echo NavigationBar::getNavigationBar(null);?>
+		<?php
+			$buttons = array(
+				NavigationBar::getCell("About.php", "About", "About", false),
+				NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
+				NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
+				NavigationBar::getCell( "/" , "Home", "Main Page", false)
+			);
+			echo NavigationBar::getNavigationBar($buttons);
+		?>
 		<div class="Container">
 			<div class="Instructions">
 				<?php echo Social::getSocialBar(); ?>

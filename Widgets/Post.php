@@ -9,9 +9,13 @@ class Post {
 	private static $TITLE = "Title";
 	private static $DATE = "Date";
 	private static $HTML = "Html";
-	private static $POST = "Post";
+	private static $POST = "Post";	
 	private static $READ_MORE_LINK = "ReadMoreLink";
+	private static $DOWNLOAD_LINK = "DownloadLink";
+	private static $SOURCE_CODE_LINK = "SourceCodeLink";
 	private static $READ_MORE_TEXT = "Read More";
+	private static $DOWNLOAD_TEXT = "Download";
+	private static $SOURCE_CODE_TEXT = "Source Code";
 	private static $TWITTER = "Twitter";
 
 	static function getPost($post){
@@ -23,7 +27,6 @@ class Post {
 			$readMoreLink = $post[self::$READ_MORE_LINK];
 		}
 
-
 		$ret = '<div class="' . self::$POST . '">';
 
 		if (isset($post[self::$TITLE])){
@@ -34,13 +37,8 @@ class Post {
 					$ret .= '<a href="' . $readMoreLink . '">' . $title . '</a> ';
 
 					if (!empty($readMoreLink)){
-
 						$absoluteURL = Utilities::getURL("/" . $readMoreLink);
-						$ret .= Social::getSocialBar();//$absoluteURL, $title);
-
-						// 						$ret .= LinkedIn::getLinkedInForUrl($absoluteURL);
-						// 						$ret .= Twitter::getTweetButtonHorizontal($absoluteURL, $title);
-						// 						$ret .= GooglePlus::getPlusOneWithUrl($absoluteURL);
+						$ret .= Social::getSocialBar($absoluteURL, $title);
 					}
 
 					$ret .= '</div>';
@@ -65,19 +63,43 @@ class Post {
 			}
 		}
 
+		$links = '';
+
 		if (!empty($readMoreLink)){
-			$ret .= '<div class="' . self::$READ_MORE_LINK . '"><a href="' . $readMoreLink . '">' . self::$READ_MORE_TEXT . '</a></div>';
+			$links .= '<a href="' . $readMoreLink . '">' . self::$READ_MORE_TEXT . '</a>';
+		}
+
+		if (isset($post[self::$DOWNLOAD_LINK])){
+			$downloadLink = $post[self::$DOWNLOAD_LINK];
+			if ($links != ''){
+				$links .= ' | ';
+			}
+			$links .= '<a href="' . $downloadLink . '">' . self::$DOWNLOAD_TEXT . '</a>';
+		}
+
+		if (isset($post[self::$SOURCE_CODE_LINK])){
+			$sourceCodeLink = $post[self::$SOURCE_CODE_LINK];
+			if ($links != ''){
+				$links .= ' | ';
+			}
+			$links .= '<a href="' . $sourceCodeLink . '">' . self::$SOURCE_CODE_TEXT . '</a>';
+		}
+
+		if ($links != ''){
+			$ret .= '<div class="' . self::$READ_MORE_LINK . '">' . $links . '</div>';
 		}
 
 		return $ret . '</div>';
 	}
 
-	public static function getPostModel($title, $date, $html, $readMoreLink, $year, $month, $day){
+	public static function getPostModel($title, $date, $html, $readMoreLink, $download, $source){
 		return array(
 		self::$TITLE => $title,
 		self::$DATE => $date,
 		self::$HTML => $html,
-		self::$READ_MORE_LINK => $readMoreLink
+		self::$READ_MORE_LINK => $readMoreLink,
+		self::$DOWNLOAD_LINK => $download,
+		self::$SOURCE_CODE_LINK => $source
 		);
 	}
 

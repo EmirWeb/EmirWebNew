@@ -22,28 +22,31 @@
 	<body>
 		<?php 
 			$buttons = array(
-				NavigationBar::getCell("Files/Resume.pdf", "Resume", "Online Resume", true),
+				NavigationBar::getCell("About.php", "About", "About", true),
+				NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
+				NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
 				NavigationBar::getCell( "/" , "Home", "Main Page", false)
 			);
 			echo NavigationBar::getNavigationBar($buttons); 
-		?>
-		
+		?>		
 		<div class="Card">
-			<div class="Logo"><img  src="favicon.ico" height="60px"></div>
+			<div class="Logo"><img  src="Images/emir.jpg" height="50px"></div>
 			<div class="Info">
 				<h3>Emir Hasanbegovic</h3>
 				<a href="http://www.twitter.com/ajelive">Twitter: @PhiGammEmir</a><br/>
 				<a href="mailto:emir@emirweb.com">E-mail: emir@emirweb.com</a><br />
 				<a href="http://ca.linkedin.com/pub/emir-hasanbegovic/2b/43a/62a">Linked in</a><br/>
+				<a href="https://plus.google.com/113561694763577258189/posts">Google +</a><br/>
 				<a href="https://www.facebook.com/ehasanbegovic">Facebook</a><br/>
+				
 			</div>
 			<?php echo Social::getSocialBar(); ?>
 		</div>
 		
 		<div class="Content">
 			
-			<h1>Highlights of Qualifications</h1>
-			<p>Hardworking, reliable and friendly yet professional individual. Fluently Bilingual (English-French). </p>
+<!-- 			<h1>Highlights of Qualifications</h1> -->
+<!-- 			<p>Hardworking, reliable and friendly yet professional individual. Fluently Bilingual (English-French). </p> -->
 			<h2>Employment</h2>
 			
 			<h3><span>(May 2010)- Current </span>Agile Engineer for <a href="http://www.xtremelabs.com" target="_blank">Xtreme Labs Inc.</a> (Mobile and Web)</h3>
@@ -62,7 +65,7 @@
 			</ul>
 			
 			
-			<h3><span>2002-Current </span> Private Tutor and Tutor for <a href="http://www.ladieslearningcode.com" target="_blank">Ladies Learning Code</a></h3>
+			<h3><span>2002-Current </span> Private Tutor and Mentor for <a href="http://www.ladieslearningcode.com" target="_blank">Ladies Learning Code</a></h3>
 			<ul>
 				<li> Computer Organization (2010 - 2nd year course) </li>
 				<li>Introduction to Computer Science I and II (2009-2010 - 1rst year courses) </li>

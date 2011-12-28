@@ -22,7 +22,15 @@
 		<?php echo Facebook::getFacebookArticleHead("Google TV"); ?>
 	</head>
 	<body>
-		<?php echo NavigationBar::getNavigationBar(null);?>
+		<?php
+			$buttons = array(
+				NavigationBar::getCell("About.php", "About", "About", false),
+				NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
+				NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
+				NavigationBar::getCell( "/" , "Home", "Main Page", false)
+			);
+			echo NavigationBar::getNavigationBar($buttons);
+		?>
 		<div class="Container">
 			<div class="TableOfContents">
 				<?php  echo Social::getSocialBar(); ?>
