@@ -38,7 +38,6 @@ class Post {
 
 					if (!empty($readMoreLink)){
 						$absoluteURL = Utilities::getURL("/" . $readMoreLink);
-						var_dump($absoluteURL);
 						$ret .= Social::getSocialBarWithUrl($absoluteURL, $title);
 					}
 
