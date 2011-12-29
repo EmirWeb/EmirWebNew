@@ -29,6 +29,7 @@ class Social {
 	}
 
 	public static function getSocialBarWithUrl($url, $title){
+// 		var_dump($url);
 		return'
 			<div class="Social">
 				<div class="Button">' .

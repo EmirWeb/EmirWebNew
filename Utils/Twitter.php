@@ -39,7 +39,7 @@ class Twitter {
 		}else{
 			$return .= ' data-count="' . self::$NONE . '"';
 		}
-
+		
 		if (isset($href)){
 			$return .= ' data-url="' . $href . '"';
 		}
