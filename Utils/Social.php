@@ -29,7 +29,6 @@ class Social {
 	}
 
 	public static function getSocialBarWithUrl($url, $title){
-// 		var_dump($url);
 		return'
 			<div class="Social">
 				<div class="Button">' .
@@ -42,7 +41,7 @@ class Social {
 		GooglePlus::getPlusOneWithUrl($url)
 		.'</div>
 				<div class="Button">'.
-			Facebook::getFacebookLike($url)
+			Facebook::getFacebookLikeWithUrl($url)
 			.'</div>
 				<div class="Clear"></div>
 			</div>
