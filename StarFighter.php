@@ -65,7 +65,6 @@
 				<div class="Instruction"><div class="Left"><strong>Space</strong></div><div class="Right"> Shoot</div></div>
 				<div class="Instruction"><div class="Left"><strong>Enter</strong></div><div class="Right"> Shoot</div></div>
 				<div class="Facebook">
-					
 					<?php echo Facebook::getFacebookComments(Utilities::getCurrentPageURL(), "300", "2"); ?>
 				</div>
 			</div> 	

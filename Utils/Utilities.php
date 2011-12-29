@@ -46,6 +46,7 @@ class Utilities {
 			} else {
 				$url .= $_SERVER[self::$SERVER_NAME].$requestUri;
 			}
+// 			var_dump($requestUri);
 	
 		return $url;
 	}

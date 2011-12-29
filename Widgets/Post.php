@@ -36,10 +36,10 @@ class Post {
 				if (!empty($readMoreLink)){
 					$ret .= '<a href="' . $readMoreLink . '">' . $title . '</a> ';
 
-					if (!empty($readMoreLink)){
-						$absoluteURL = Utilities::getURL("/" . $readMoreLink);
-						$ret .= Social::getSocialBar($absoluteURL, $title);
-					}
+// 					if (!empty($readMoreLink)){
+// 						$absoluteURL = Utilities::getURL("/" . $readMoreLink);
+// 						$ret .= Social::getSocialBar($absoluteURL, $title);
+// 					}
 
 					$ret .= '</div>';
 				} else {
