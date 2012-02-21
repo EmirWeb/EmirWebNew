@@ -31,3 +31,33 @@ h1, h2 {
 code {
 	font-size: 12px;	
 }
+
+div.Table {
+	text-align: left;
+	font-size: 12px;
+	
+}
+
+div.Table div.Row {
+}
+
+div.Table div.Row div.Header{
+	text-align: center;
+	border-bottom: 1px solid #FF3000;
+	color: #FF3000;
+}
+
+div.Table div.Row div.Column {
+	border-left: 1px solid #FF3000;
+	border-right: 1px solid #FF3000;	
+	float: left;
+	width: 175px;	
+}
+
+div.Table div.Row div.Cycle {
+	border-right: 1px solid #FF3000;
+	float: left;
+	text-align: center;
+	width: 50px;
+}
+
