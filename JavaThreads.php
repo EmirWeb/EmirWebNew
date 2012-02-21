@@ -60,9 +60,11 @@ echo NavigationBar::getNavigationBar($buttons);
 				<li><a href="#Header12">Concurrent Classes</a></li>
 				<li><a href="#Header13">Immutable Classes</a></li>
 				<li><a href="#Header14">Executors</a></li>
+				<li><a href="#Header15">Singletons</a></li>
 				<li><a href="#Header15">When Will Java Thread Programming Be Safe
 						Again?</a></li>
 				<li><a href="#Header16">Conclusions and Guidelines</a></li>
+				<li><a href="#Header16">Referneces</a></li>
 			</ul>
 			
 			
@@ -74,7 +76,7 @@ echo NavigationBar::getNavigationBar($buttons);
 				A good understanding of <a
 					href="http://en.wikipedia.org/wiki/Thread_(computing)">multi-threading</a>
 				in the traditional unix memory model is required for the following
-				tutorial. Also if anything please read <a href="#Header15">Conclusions
+				tutorial. Also if anything please read <a href="#Header16">Conclusions
 					and Guidelines</a> before attempting java programming again.
 			</p>
 			<h2 id="Header1">Traditional Unix Threads</h2>
@@ -345,7 +347,7 @@ echo NavigationBar::getNavigationBar($buttons);
 				time that they access the volatile variable.</p>
 
 
-			<h2 id="Header7">Wait/notify and Hoare Monitors</h2>
+			<h2 id="Header7">Wait/Notify and Hoare Monitors</h2>
 
 			<p>Hoare Monitors allow threads to wait for a condition inside a
 				monitor. To wait a Thread must have the monitor's lock (be inside a
@@ -411,6 +413,17 @@ echo NavigationBar::getNavigationBar($buttons);
 				locking of thread safe or non thread safe objects. I highly
 				recommend the use of these classes.
 			</p>
+			
+			<p>
+				Due to the difficulty of using wait/notify correctly, Java has classes such as
+				BlockingQueue allow for functions such as take() which blocks until there is a
+				new element in the queue. Also look at <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/CountDownLatch.html">CountDownLatch</a>
+				, <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Semaphore.html">Semaphores</a>, 
+				<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/CyclicBarrier.html">CyclicBarrier</a> 
+				and <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Exchanger.html">Exchanger</a>. 
+			</p>
+			
+			<p> Note for timing use System.nanoTime instead of System.currentTimeInMillis.
 
 			<h2 id="Header13">Immutable Classes</h2>
 
@@ -454,9 +467,38 @@ echo NavigationBar::getNavigationBar($buttons);
 				they are thread safe and optimized for efficiency and stability. Do
 				not bother launching threads yourself.
 			</p>
+			<h2 id="Header15">Singletons</h2>
 
+			<p>
+				Singleton patterns need have their constructor synchronized as follows
+			</p>
+			<code>
+				<pre>
+		public class MySingleton {
+			private Object object;
+			public static synchronized Object getObject(){
+				if (object == null)
+					object = new Object();
+				return object;
+			}
+		}
+				</pre>
+			</code>
+			
+			<p>Better yet use static and final appropriately to accomplish this at runtime</p>
+			<code>
+				<pre>
+		public class MySingleton {
+			private static final Object object = new Object();
+			public static Object getObject(){
+				return object;
+			}
+			
+		}
+				</pre>
+			</code>
 
-			<h2 id="Header15">When Will Java Thread Programming Be Safe Again?</h2>
+			<h2 id="Header16">When Will Java Thread Programming Be Safe Again?</h2>
 			<p>The time is now. Think carefully about what variables you want to
 				use to share information between threads and wrap them around
 				synchronized methods or in front of a volatile keyword, depending on
@@ -482,7 +524,7 @@ echo NavigationBar::getNavigationBar($buttons);
 					of the thread safe environment you may have created. 
 			
 			</p>
-			<h2 id="Header16">Conclusions and Guidelines</h2>
+			<h2 id="Header17">Conclusions and Guidelines</h2>
 			<p>If you are not sure how your threads behave in memory, identify
 				the variables you will be sharing, make them private and use
 				synchronized on your read and write methods. This will not make your
@@ -495,7 +537,7 @@ echo NavigationBar::getNavigationBar($buttons);
 				synchronized, use Concurrent Classes. These are optimized and thread
 				safe. These simple rules will ensure that your programmes are
 				correct.</p>
-			<h2 id="Header16">References</h2>
+			<h2 id="Header18">References</h2>
 			<ul>
 				<li>Inside the JAVA 2 Virtual Machine Second Edition, by Bill
 					Verners, 1999, McGraw-Hill</li>
