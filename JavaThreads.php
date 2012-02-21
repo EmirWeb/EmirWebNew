@@ -543,6 +543,8 @@ echo NavigationBar::getNavigationBar($buttons);
 					Verners, 1999, McGraw-Hill</li>
 				<li>JAVA IN A NUTSHELL A Desktop Quick Reference 5th Edition, by
 					David Flanagan, 2005, O'REILLY</li>
+				<li>Effective Java Second Edition, By Joshua Bloch
+					2008, Sun Microsystems Inc.</li>
 				<li><a
 					href="http://docs.oracle.com/javase/tutorial/essential/concurrency/">Lesson:
 						Concurrency</a>, 2012, Oracle and/or its affiliates</li>
