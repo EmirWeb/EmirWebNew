@@ -4,10 +4,11 @@ include_once('Utils/GoogleAnalytics.php');
 include_once('Utils/Utilities.php');
 include_once('Utils/Facebook.php');
 include_once('Utils/Social.php');
+include_once('Utils/SyntaxHighlighter.php');
 include_once('Widgets/Group.php');
 include_once('Widgets/NavigationBar.php');
 DomManager::addCSS('CSS/Body.css');
-DomManager::addCSS('CSS/GoogleTV.css');
+DomManager::addCSS('CSS/Blog.css');
 DomManager::addCSS('CSS/Social.css');
 ?>
 
@@ -23,19 +24,10 @@ DomManager::addCSS('CSS/Social.css');
 	</head>
 	<body>
 	<?php
-		$buttons = array(
-			NavigationBar::getCell("About.php", "About", "About", false),
-			NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
-			NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
-			NavigationBar::getCell( "/" , "Home", "Main Page", false)
-		);
 		echo NavigationBar::getNavigationBar($buttons);
 	?>
 	<div class="Container">
 		<div class="TableOfContents">
-			
-			
-			
 			
 		<?php  echo Social::getSocialBar(); ?>
 
@@ -50,10 +42,6 @@ DomManager::addCSS('CSS/Social.css');
 				<li><a href="#Header7">Coding</a></li>
 				<li><a href="#Header8">Coding Acceleration and Gravity (Generic Class)</a></li>
 			</ul>
-			
-			
-			
-			
 			
 			<?php echo Facebook::getFacebookComments(Utilities::getCurrentPageURL(), "300", "3")?>
 			</div>
@@ -91,8 +79,8 @@ DomManager::addCSS('CSS/Social.css');
 				At each interval the object's velocity is increased by the
 				acceleration.</p>
 			<p>v(i) = v(i -1) + (delta)t * a</p>
-			<code class="Java">
-				<pre>
+
+<pre class="brush: java;">
 @Override
 public float[] getDirectionVector(long timeChange) { 
 	lastInterval = timeChange; 
@@ -101,8 +89,7 @@ public float[] getDirectionVector(long timeChange) {
 	float[] d = Algebra.multiplyVectorByConstant(velocity, ratio);
 	return d;
 }
-				</pre>
-			</code>
+</pre>
 			<p>
 				v and a are vectors each containing an x and y component that
 				dictates each items behaviour. To replicate projectile motion, it
@@ -111,15 +98,13 @@ public float[] getDirectionVector(long timeChange) {
 				we normalize it and multiply it by the magnitude. This gives us our
 				initial velocity and the above gravity algorithm can take charge the
 				rest of the way.
-				<code class="Java">
-					<pre>
-		float xDirection = (float) (Math.cos(Math.toRadians(angle))); 
-		float yDirection = (float) (Math.sin(Math.toRadians(angle))); 
-		float[] direction = new float[] { xDirection, yDirection }; 
-		direction = Algebra.normalize(direction);
-		direction = Algebra.multiplyVectorByConstant(direction, power); 
-					</pre>
-				</code>
+<pre class="brush: java;">
+	float xDirection = (float) (Math.cos(Math.toRadians(angle))); 
+	float yDirection = (float) (Math.sin(Math.toRadians(angle))); 
+	float[] direction = new float[] { xDirection, yDirection }; 
+	direction = Algebra.normalize(direction);
+	direction = Algebra.multiplyVectorByConstant(direction, power); 
+</pre>
 			
 			
 			<p>Friction was the last implementation and used the following
@@ -147,20 +132,21 @@ public float[] getDirectionVector(long timeChange) {
 				collisions. The following hash function guarantees low to no
 				collisions:
 
-				<code class="Java">
-					<pre>
-	private static final int gridSize = 100000; 
-	private final LinkedList&lt;WorldObject&gt;[] gridSet = new LinkedList[gridSize];
-	
-	private static int hash(int x, int y) { 
-		int hash = x * 100 + y;
-	}
-	
+<pre class="brush: java;">	
+private static final int gridSize = 100000; 
+private final LinkedList&lt;WorldObject&gt;[] gridSet = new LinkedList[gridSize];
+
+private static int hash(int x, int y) { 
+	int hash = x * 100 + y;
+
 	if (hash &lt; 0) 
 		hash += 10000;
-	hash = hash % gridSize; return Math.abs(hash);
-					</pre>
-				</code>
+		
+	hash = hash % gridSize;
+	 
+	return Math.abs(hash);	
+}
+</pre>
 			
 			
 			<p>This GridHash holds references to the WorldObjects and what grid
@@ -188,23 +174,19 @@ public float[] getDirectionVector(long timeChange) {
 			<h2 id="Header8">Coding Acceleration and Gravity (Generic Class)</h2>
 			<p>The constructor for the Generic class takes a position, a starting
 				velocity and an acceleration Vector.</p>
-			<code class="Java">
-				<pre>
-	public Generic(float[] acceleration, float[] position, float[] startVelocity);
-				</pre>
-			</code>
+<pre class="brush: java;">
+public Generic(float[] acceleration, float[] position, float[] startVelocity);
+</pre>
 			<p>Example:</p>
 
-			<code class="Java">
-				<pre>
-	Generic anvil = new Generic(
-		new float[] { 0, EARTH_GRAVITY}, 
-		new float[] { 3, height }, 
-		new float[] { 0, 0 }
-	);
-	anvil.setImageId(15); anvil.setWaterMark("ANVIL"); world.add(anvil);
-				</pre>
-			</code>
+<pre class="brush: java;">
+Generic anvil = new Generic(
+	new float[] { 0, EARTH_GRAVITY}, 
+	new float[] { 3, height }, 
+	new float[] { 0, 0 }
+);
+anvil.setImageId(15); anvil.setWaterMark("ANVIL"); world.add(anvil);
+</pre>
 			<p>In this case, we are choosing an image that we have added to the
 				renderer previously and setting the waterMark, which is used to
 				uniquely identify the type or the individual object for comparison
@@ -214,14 +196,6 @@ public float[] getDirectionVector(long timeChange) {
 		</div>
 
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
 		<?php echo Facebook::getFacebookRoot();?>
 	</body>
 </html>

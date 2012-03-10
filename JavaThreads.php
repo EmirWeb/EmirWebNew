@@ -4,12 +4,15 @@ include_once('Utils/GoogleAnalytics.php');
 include_once('Utils/Utilities.php');
 include_once('Utils/Facebook.php');
 include_once('Utils/Social.php');
+
 include_once('Widgets/Group.php');
 include_once('Widgets/NavigationBar.php');
+include_once('Utils/SyntaxHighlighter.php');
+
 DomManager::addCSS('CSS/Body.css');
-DomManager::addCSS('CSS/Widgets/SyntaxHighlighter.css');
-DomManager::addCSS('CSS/GoogleTV.css');
+DomManager::addCSS('CSS/Blog.css');
 DomManager::addCSS('CSS/Social.css');
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -18,24 +21,11 @@ DomManager::addCSS('CSS/Social.css');
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>EmirWeb</title>
 <link rel="shortcut icon" href="favicon.ico" />
-
-
-
-
-
-
-
-
 		<?php echo DomManager::getCSS(); ?>
 		<?php echo DomManager::getScripts(); ?>
 		<?php echo Facebook::getFacebookArticleHead("Android Tutorial"); ?>
 	</head>
 <body>
-
-
-
-
-
 <?php
 $buttons = array(
 NavigationBar::getCell("About.php", "About", "About", false),
@@ -64,7 +54,6 @@ echo NavigationBar::getNavigationBar($buttons);
 				
 				<li><a href="#Header8">So Much Overhead</a></li>
 				<li><a href="#Header9">Managing Memory Updates Yourself</a></li>
-				<li><a href="#Header10">Android Development</a></li>
 				<li><a href="#Header11">Thread Safe Classes</a></li>
 				<li><a href="#Header12">Concurrent Classes</a></li>
 				<li><a href="#Header13">Immutable Classes</a></li>
@@ -146,57 +135,47 @@ echo NavigationBar::getNavigationBar($buttons);
 				monitor) through the synchronized keyword.
 			</p>
 			<p>1. Synchronized Function</p>
-			<code>
-				<pre>
-		synchronized int myCriticalSection(){
-			// Critical section
-			return result;
-		}
-				</pre>
-			</code>
+<pre class="brush: java;">
+synchronized int myCriticalSection(){
+	// Critical section
+	return result;
+}
+</pre>
 			<p>2. Synchronized Block of Code.</p>
-			<code>
-				<pre>
-		...
-			synchronized(someNonPrimitiveObject) {
-				// Critical section
-			}
-		...
-				</pre>
-			</code>
+<pre class="brush: java;">
+...
+	synchronized(someNonPrimitiveObject) {
+		// Critical section
+	}
+...
+</pre>
 			<p>What happens when you use #2</p>
-			<code>
-				<pre>
-		// Acquire lock + MAGIC
-			// Critical section
-		// MAGIC + release lock
-				</pre>
-			</code>
+<pre class="brush: java;">
+// Acquire lock + MAGIC
+	// Critical section
+// MAGIC + release lock
+</pre>
 			<p>
 				Note the MAGIC, we will talk about this <a href="#Header4">later</a>.
 			</p>
 			<p>What happens when you use #1</p>
-			<code>
-				<pre>
-		int myCriticalSection(){
-			syncrhonized (this) {
-				//Critical section
-			}
-			return result;
-		}
-				</pre>
-			</code>
+<pre class="brush: java;">
+int myCriticalSection(){
+	syncrhonized (this) {
+		//Critical section
+	}
+	return result;
+}
+</pre>
 			<p>or</p>
-			<code>
-				<pre>
-		int myCriticalSection(){
-			// Acquire lock + MAGIC
-				// Critical section
-			// MAGIC + release lock
-			return result;
-		}
-				</pre>
-			</code>
+<pre class="brush: java;">
+int myCriticalSection(){
+	// Acquire lock + MAGIC
+		// Critical section
+	// MAGIC + release lock
+	return result;
+}
+</pre>
 			<h2 id="Header4">This Is Where The MAGIC Happens</h2>
 
 			<p>Most people think they understand the above example and think that it can be replaced by
@@ -214,30 +193,28 @@ echo NavigationBar::getNavigationBar($buttons);
 			<p>Lets go over a simple example.</p>
 
 
-			<code>
-				<pre>
-		class MySexyMonitor{
-		
-			private String mString;
-		
-			public synchronized String getSyncedString(){
-				return getString();
-			}	
-		
-			public synchronized setSyncedString(String string){
-				setString(string);
-			}
-		
-			public String getString(){
-				return mString;
-			}
-		
-			public setString(String string){
-				mString = string;
-			}
-		}
-				</pre>
-			</code>
+<pre class="brush: java;">
+class MySexyMonitor{
+
+	private String mString;
+
+	public synchronized String getSyncedString(){
+		return getString();
+	}	
+
+	public synchronized setSyncedString(String string){
+		setString(string);
+	}
+
+	public String getString(){
+		return mString;
+	}
+
+	public setString(String string){
+		mString = string;
+	}
+}
+</pre>
 			<p>Assume that these happen atomically in the following order</p>
 
 
@@ -335,11 +312,9 @@ echo NavigationBar::getNavigationBar($buttons);
 			<p>No! There are other ways of ensuring that your memory is up to
 				date. The volatile keyword can be set when instantiating class member
 				variables.</p>
-			<code>
-				<pre>
-		private volatile String mVolatileString;
-				</pre>
-			</code>
+<pre class="brush: java;">
+private volatile String mVolatileString;
+</pre>
 			<p>The volatile keyword will ensure that every write to that variable is visible to all threads.
 				 It will not ensure that access to
 				that variable remains atomic. Certain blogs will claim that adding the volatile keyword
@@ -432,21 +407,19 @@ echo NavigationBar::getNavigationBar($buttons);
 			</p>
 
 
-			<code>
-				<pre>
-		Public class myImmutableClass {
-			private final String mImmutableString;
-			
-			public myImmutableClass(String string){
-				mImmutableString = string;
-			}
-		
-			public myImmutableClass append(char c){
-				return new myImmutableClass(mImmutableString + c);
-			}
-		}				
-				</pre>
-			</code>
+<pre class="brush: java;">
+Public class myImmutableClass {
+	private final String mImmutableString;
+	
+	public myImmutableClass(String string){
+		mImmutableString = string;
+	}
+
+	public myImmutableClass append(char c){
+		return new myImmutableClass(mImmutableString + c);
+	}
+}				
+</pre>
 			<p>This works because constructors define the initial value of the
 				object and hence do not require a happens-before relationship.
 				Similarly, constructors can not be synchronized and any synchronized
@@ -468,32 +441,26 @@ echo NavigationBar::getNavigationBar($buttons);
 
 			<p>Singleton patterns need have their constructor synchronized as
 				follows</p>
-			<code>
-				<pre>
-		public class MySingleton {
-			private Object object;
-			public static synchronized Object getObject(){
-				if (object == null)
-					object = new Object();
-				return object;
-			}
-		}
-				</pre>
-			</code>
+<pre class="brush: java;">
+public class MySingleton {
+	private Object object;
+	public static synchronized Object getObject(){
+		if (object == null)
+			object = new Object();
+		return object;
+	}
+}
+</pre>
 
 			<p>Better yet use static and final appropriately to accomplish this
 				at runtime</p>
-			<code>
-				<pre>
-		public class MySingleton {
-			private static final Object object = new Object();
-			public static Object getObject(){
-				return object;
-			}
-			
-		}
-				</pre>
-			</code>
+<pre class="brush: java;">
+public class MySingleton {
+	private static final Object object = new Object();
+	public static Object getObject(){
+		return object;
+	}
+}</pre>
 			
 			<h2 id="Header16">When Will Java Thread Programming Be Safe Again?</h2>
 			<p>The time is now. Think carefully about what variables you want to
@@ -555,13 +522,6 @@ echo NavigationBar::getNavigationBar($buttons);
 
 		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
 	
 	<?php echo Facebook::getFacebookRoot();?>
 	</body>

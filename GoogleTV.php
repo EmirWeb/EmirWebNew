@@ -4,10 +4,11 @@
 	include_once('Utils/Utilities.php');
 	include_once('Utils/Facebook.php');
 	include_once('Utils/Social.php');
+	include_once('Utils/SyntaxHighlighter.php');
 	include_once('Widgets/Group.php');
 	include_once('Widgets/NavigationBar.php');
 	DomManager::addCSS('CSS/Body.css');
-	DomManager::addCSS('CSS/GoogleTV.css');
+	DomManager::addCSS('CSS/Blog.css');
 	DomManager::addCSS('CSS/Social.css');
 ?>
 
@@ -23,12 +24,6 @@
 	</head>
 	<body>
 		<?php
-			$buttons = array(
-				NavigationBar::getCell("About.php", "About", "About", false),
-				NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
-				NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
-				NavigationBar::getCell( "/" , "Home", "Main Page", false)
-			);
 			echo NavigationBar::getNavigationBar($buttons);
 		?>
 		<div class="Container">
@@ -166,55 +161,49 @@ In the example below, the fragment tag can be replaced by any instantiation of t
 FrameLayout can act in the same way. The FrameLayout is the best way to use Fragments, due
 to some issues or unavailable documentation concerning natively inflated fragments.
 				</p>
-				
-				<code class="XML">
-					<pre>
-		&lt;?xml version="1.0" encoding="utf-8"?&gt;
-		&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			android:orientation="vertical"
-			android:layout_width="fill_parent"
-			android:layout_height="fill_parent"&gt;
-			
-			&lt;fragment class="com.classes.example"
-				android:layout_weight="1"
-				android:layout_width="fill_parent"
-				android:layout_height="0dp"
-				android:id="@+id/fragment" /&gt;
-				
-			&lt;FrameLayout
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:id="@+id/list" /&gt;
-				
-		&lt;/LinearLayout&gt;
-					</pre>
-				</code>
+
+<pre class="brush: xml;">				
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"&gt;
+	
+	&lt;fragment class="com.classes.example"
+		android:layout_weight="1"
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:id="@+id/fragment" /&gt;
+		
+	&lt;FrameLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/list" /&gt;
+		
+&lt;/LinearLayout&gt;
+</pre>
 				
 				<p>
 The example below shows how to replace/create fragments.  
 				</p>
-				<code class="Java">
-					<pre>
-		SampleFragment f = SampleFragment.initialize(object);
-		FragmentTransaction tr = getFragmentManager().beginTransaction();
-		tr.replace(R.id.list, f);
-		tr.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-		tr.commit();
-					</pre>
-				</code>
+<pre class="brush: java;">
+SampleFragment f = SampleFragment.initialize(object);
+FragmentTransaction tr = getFragmentManager().beginTransaction();
+tr.replace(R.id.list, f);
+tr.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+tr.commit();
+</pre>
 				<p>The example below shows the initialization function 
 that passes the relevant information into the Fragment's parameters.</p>
-				<code class="Java">
-					<pre>
-		public static SampleFragment initialize(Object serializableObject) {
-			Bundle bundle = new Bundle();
-			bundle.putSerializable(“Object”, serializableObject);
-			SampleFragment sampleFragment = new SampleFragment();
-			sampleFragment.setArguments(bundle);
-			return sampleFragment;
-		}
-					</pre>
-				</code>
+<pre class="brush: java;">
+public static SampleFragment initialize(Object serializableObject) {
+	Bundle bundle = new Bundle();
+	bundle.putSerializable(“Object”, serializableObject);
+	SampleFragment sampleFragment = new SampleFragment();
+	sampleFragment.setArguments(bundle);
+	return sampleFragment;
+}
+</pre>
 				<h2 id="Videos">Videos</h2>
 				<p>
 Although Flash and HTML5 is now available for integration into native applications on tablets (other
@@ -227,14 +216,12 @@ VideoView (<a href="http://code.google.com/tv/android/docs/gtv_media_formats.htm
 				<p>
 The example below will start a video feed (including flv's).
 				</p>
-				<code class="Java">
-					<pre>
-	VideoView videoView = (VideoView) findViewById(R.id.video);
-	videoView.setVideoPath(“http://www.sample.com/videoFeed”);
-	videoView.requestFocus();
-	videoView.start();
-					</pre>
-				</code>
+<pre class="brush: java;">
+VideoView videoView = (VideoView) findViewById(R.id.video);
+videoView.setVideoPath(“http://www.sample.com/videoFeed”);
+videoView.requestFocus();
+videoView.start();
+</pre>
 				
 				<h2 id="OpenSource">Open Source</h2>
 				<p>

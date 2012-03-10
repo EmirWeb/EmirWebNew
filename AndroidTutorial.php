@@ -4,10 +4,11 @@ include_once('Utils/GoogleAnalytics.php');
 include_once('Utils/Utilities.php');
 include_once('Utils/Facebook.php');
 include_once('Utils/Social.php');
+include_once('Utils/SyntaxHighlighter.php');
 include_once('Widgets/Group.php');
 include_once('Widgets/NavigationBar.php');
 DomManager::addCSS('CSS/Body.css');
-DomManager::addCSS('CSS/GoogleTV.css');
+DomManager::addCSS('CSS/Blog.css');
 DomManager::addCSS('CSS/Social.css');
 ?>
 
@@ -23,12 +24,6 @@ DomManager::addCSS('CSS/Social.css');
 	</head>
 <body>
 <?php
-$buttons = array(
-NavigationBar::getCell("About.php", "About", "About", false),
-NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
-NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
-NavigationBar::getCell( "/" , "Home", "Main Page", false)
-);
 echo NavigationBar::getNavigationBar($buttons);
 ?>
 	<div class="Container">
@@ -170,25 +165,22 @@ echo NavigationBar::getNavigationBar($buttons);
 				holds the text. Note that everything must have layout_height and
 				layout_width value in its opening XML tag. See the example below.</p>
 
-			<code>
-				<pre>
-		&lt;?xml version="1.0" encoding="utf-8"?&gt;
-		&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			android:orientation="vertical"
-			android:layout_width="fill_parent"
-			android:layout_height="fill_parent"&gt;
-			&lt;ImageView  
-				android:layout_width="wrap_content" 
-				android:layout_height="wrap_content" 
-				android:src="@drawable/kitty"/&gt;
-			&lt;TextView  
-				android:layout_width="wrap_content" 
-				android:layout_height="wrap_content" 
-				android:text="Kitten"/&gt;
-		&lt;/LinearLayout&gt;
-
+<pre class="brush: xml;">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"&gt;
+	&lt;ImageView  
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:src="@drawable/kitty"/&gt;
+	&lt;TextView  
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:text="Kitten"/&gt;
+&lt;/LinearLayout&gt;
 </pre>
-			</code>
 
 			<h2 id="Header7">Activity Life Cycle</h2>
 			<p>The activity life cycle is important to know as it tells you what

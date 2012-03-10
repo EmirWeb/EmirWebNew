@@ -36,6 +36,7 @@ class NavigationBar {
 			
 			$buttons = array(
 				NavigationBar::getCell("About.php", "About", "About", false),
+				NavigationBar::getCell("Personal.php", "Personal", "Personal", false),
 				NavigationBar::getCell("Projects.php", "Projects", "Projects", false),
 				NavigationBar::getCell("Blog.php", "Blog", "Blog", false),
 				NavigationBar::getCell( "/" , "Home", "Main Page", false)

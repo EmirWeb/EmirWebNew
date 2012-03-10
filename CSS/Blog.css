@@ -41,7 +41,7 @@ div.Table {
 div.Table div.Row {
 }
 
-div.Table div.Row div.Header{
+div.Table div.Row div.Header {
 	text-align: center;
 	border-bottom: 1px solid #FF3000;
 	color: #FF3000;
