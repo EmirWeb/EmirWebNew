@@ -23,7 +23,7 @@ DomManager::addCSS('CSS/Social.css');
 <link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
 		<?php echo DomManager::getScripts(); ?>
-		<?php echo Facebook::getFacebookArticleHead("Android Tutorial"); ?>
+		<?php echo Facebook::getFacebookArticleHead("Java Threads An Inconvenient Truth"); ?>
 	</head>
 <body>
 <?php
