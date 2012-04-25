@@ -2,8 +2,8 @@ div.Container {
 	position: relative;
 	width: 960px;
 	padding-top: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
+	padding-left: 40px;
+	padding-right: 40px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
@@ -61,3 +61,7 @@ div.Table div.Row div.Cycle {
 	width: 50px;
 }
 
+img.Images {
+	display: block;
+	margin: 0 auto;
+}
