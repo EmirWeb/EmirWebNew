@@ -20,7 +20,7 @@
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
 		<?php echo DomManager::getScripts(); ?>
-		<?php echo Facebook::getFacebookArticleHead("Google TV Part 2"); ?>
+		<?php echo Facebook::getFacebookArticleHead("Google TV: The Full Monty"); ?>
 	</head>
 	<body>
 		<?php
