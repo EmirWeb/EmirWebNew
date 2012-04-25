@@ -29,28 +29,24 @@
 		<div class="Container">
 			<div class="TableOfContents">
 				<?php  echo Social::getSocialBar(); ?>
-				<h2>Google TV Part 2</h2>
-				<ol>
-					<li>
-						<a href="#HighLevelOverView">Google TV: The Full Monty</a>
-						<ul>
-							<li><a href="#QuickSummary">The Device</a></li>
-							<li><a href="#HighLevel">UX/UI</a></li>
-							<li><a href="#DeviceSpecificFeatures">Capabilities and Features</a></li>
-							<li><a href="#Persona">Mobile and Social Implications</a></li>
-							<li><a href="#Interesting">Benefits</a></li>
-							<li><a href="#Downfalls">Challenges</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#LowLevelOverView">Developing on a Google TV</a>
-						<ul>
-							<li><a href="#Introduction">Honeycomb</a></li>
-							<li><a href="#Videos">Videos</a></li>
-							<li><a href="#OpenSource">Open Source</a></li>
-						</ul>
-					</li>
-				</ol>
+				<h2>Google TV: The Full Monty</h2>
+				<ul>
+				
+					<li><a href="#Header_1">Synopsis</a></li>
+					<li><a href="#Header_2">Recap</a></li>
+					<li><a href="#Header_3">What has happen since then</a></li>
+					<li><a href="#Header_4">3.0 Home Screen</a></li>
+					<li><a href="#Header_5">3.1 (also 3.2) Home Screen</a></li>
+					<li><a href="#Header_6">CES 2012</a></li>
+					<li><a href="#Header_7">New Sony Remote</a></li>
+					<li><a href="#Header_8">Vizio Stream</a></li>
+					<li><a href="#Header_9">LG</a></li>
+					<li><a href="#Header_10">Lenovo</a></li>
+					<li><a href="#Header_11">Samsung</a></li>
+					<li><a href="#Header_12">Summary</a></li>
+					<li><a href="#Header_13">Competition</a></li>
+		
+				</ul>
 
 			
 			<?php echo Facebook::getFacebookComments(Utilities::getCurrentPageURL(), "300", "3")?>
@@ -99,8 +95,9 @@ after the initial release, I was lucky enough to have developped the
 				<h2 id="Header_5">3.1 (also 3.2) Home Screen</h2>
 				<img class="Images" src="Images/GoogleTV/honeycomb_launcher_31.png" width="500px"/>
 				<p>
-Recently Google TV has release version 3.2 which is currently only available on Sony devices and will eventually be 
-pushed to the Logitech devices as well.				
+Recently Google TV released Android SDK version 3.2 to their Sony devices, Logitech coming soon. 3.2 includes Http Live Streaming support
+particularly support for m3u8 files. These files point to variable bit rates of the same video
+and allow apps using the native player to get the best resoponse. This is critical for the current devices in market. 
 				</p>
 				<h2 id="Header_6">CES 2012</h2>
 				<p>
@@ -140,10 +137,38 @@ TV boxes will have. Think of the difference between an Android tablet as opposed
 				<h2 id="Header_11">Samsung</h2>
 				<p>
 Google and Samsung have anounced a partnership. Interestingly enough Samsung already has an HTML5 based 
-<a hreaf="http://www.samsung.com/us/2012-smart-tv/">Smart TV</a> initiative. So what does that mean for their
+<a href="http://www.samsung.com/us/2012-smart-tv/">Smart TV</a> initiative. So what does that mean for their
 Google TV initiative?
 				</p>
-				
+				<h2 id="Header_12">Summary</h2>
+				<p>
+As you may have noticed, there are many devices all doing different things with Google TV, ie. set-top box vs. stream player vs. Blu-Ray vs. TV.
+And within all of these, there are different versions of operating system versions 3.1 vs. 3.2 vs 4.0. Don't forget all the different looking remotes 
+and home screens.
+				</p>
+				<p>
+This may seem like a bad thing, but in reality it is a good thing. The Android operating system allows for apps tomove between versions of their operating systems easily.
+Each OEM tries to differentiate themselves through different means, think about the home screen for a Samsung Android phone vs. a Google Sponsored phone like the Nexus series.
+They look different but they operate the same. The advantage here is that each OEM can inflitrate their market with Google TV. Mark my words, sooner or later Google TV will be
+everywhere. It is a cheap implementation and has a large following OEMs would be missing out if they didn't take advantage of such a lucrative offer. 
+				</p>
+				<h2 id="Header_13">Competition</h2>
+				<p>
+Apple has been looiming in the shadows with <a href="http://www.apple.com/ca/appletv/">Apple TV</a>. 
+Apple TV operates as an add-on for your TV, it does not add to your TV feed the way Google TV does.
+Apple TV has not yet opened up develompent for their devices, this means that there is no market so
+only the apps that come pre-installed are curently available. Most of the apps installed are based off
+of a template, this means they all look the same but offer different content. The major differentiation 
+between Apple TV and Google TV is that you can move your files to the Apple TV from your other iOS devices
+or iTunes and play them, stream them, air play etc. Google TV has the technology to go this, but 
+does not have the apps, yet.
+				</p>
+				<p>
+Lets not forget <a href="http://www.boxee.tv/">Boxee</a>, <a href="http://www.roku.com/ca">Roku</a>, <a href="http://www.samsung.com/us/2012-smart-tv/">Samsung Smart TV</a>,
+ <a href="http://www.xbox.com/">X-Box</a>, <a href="http://www.playstation.ca/">Playstation 3</a> and  <a href="http://www.wdc.com/en/products/WDTV/">WDTV</a>. Each of these have 
+ the exact same potential as Google TV, just not the same focus or OEM support. It will be interesting to see their individual long term success.
+				</p>
+			
 				<br />
 				<br />
 				<br />
