@@ -190,7 +190,7 @@ what this means for their Google TV initiative.
 				</p>
 				<h2 id="Header_12">Summary</h2>
 				<p>
-Clearly, there are many devices doing a variety of things with Google TV; set-top box vs. 
+Clearly, there are many companies doing a variety of things with Google TV; set-top box vs. 
 stream player vs. Blu-Ray vs. Televisions.
 Within all of these, there are different operating system versions; 3.1 vs. 3.2 vs 4.0,
 as well as different remotes and home screens.
