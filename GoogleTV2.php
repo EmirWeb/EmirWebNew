@@ -99,7 +99,7 @@ In my opinion, this is the best way to distribute Google TV.
 				<p>
  
 In January of 2012, Google released version 3.1. Sony was the first
-to update its devices and Logtech followed suit a few months later. For developers, 
+to update its devices and Logitech followed suit a few months later. For developers, 
 this new version opened up native app development. 
 The first release featured Android SDK version 3.0 
 (<a href="http://developer.android.com/sdk/android-3.0-highlights.html">Honeycomb</a>)
