@@ -38,7 +38,7 @@
 					<li><a href="#Header_4">3.0 Home Screen</a></li>
 					<li><a href="#Header_5">3.1 (also 3.2) Home Screen</a></li>
 					<li><a href="#Header_6">CES 2012</a></li>
-					<li><a href="#Header_7">New Sony Remote</a></li>
+					<li><a href="#Header_7">Sony Remote</a></li>
 					<li><a href="#Header_8">Vizio Stream</a></li>
 					<li><a href="#Header_9">LG</a></li>
 					<li><a href="#Header_10">Lenovo</a></li>
