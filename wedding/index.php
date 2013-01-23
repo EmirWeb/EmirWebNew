@@ -19,7 +19,7 @@
 		<div class="Content">
 			<?php $BANNER_WIDTH = 952; ?>
 			<div class="Crop">
-				<img class="BannerFrame" id="BannerAnimator0" alt="Laura & Emir" src="/Files/Images/BannerAnimationFrame0.JPG" width="<?php echo $BANNER_WIDTH; ?>">
+				<img class="BannerFrame" id="BannerAnimator0" alt="Laura & Emir" src="/wedding/Files/Images/BannerAnimationFrame0.JPG" width="<?php echo $BANNER_WIDTH; ?>">
 				<img class="BannerFrame" id="BannerAnimator1" alt="Laura & Emir" width="<?php echo $BANNER_WIDTH; ?>">
 				<img class="BannerFrame" id="BannerAnimator2" alt="Laura & Emir" width="<?php echo $BANNER_WIDTH; ?>">
 				<img class="BannerFrame" id="BannerAnimator3" alt="Laura & Emir" width="<?php echo $BANNER_WIDTH; ?>">

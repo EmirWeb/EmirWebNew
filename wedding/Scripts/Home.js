@@ -39,7 +39,7 @@ $(document).ready(function() {
 			bannerAnimator.push(bannerFrame);
 			if (currentFrameIndex > 0){
 				bannerFrame.animate({opacity : 0}, 0).removeClass('show');
-				bannerFrame.attr('src','/Files/Images/BannerAnimationFrame'+currentFrameIndex+'.JPG')
+				bannerFrame.attr('src','/wedding/Files/Images/BannerAnimationFrame'+currentFrameIndex+'.JPG')
 				bannerFrame.load(function() {
 					loadedFrames++;
 					if (loadedFrames == frameCount) 
