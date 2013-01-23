@@ -1,0 +1,29 @@
+div.Content {
+	position: relative;
+	font-size: 12px;
+	padding-top: 30px;
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+/* height = 638 */
+div.Content div.Crop img.BannerFrame {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+div.Content div.Crop div.Banner {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	text-shadow: navy;
+	font-size: 50px;
+	line-height: 60px;
+	font:bold;
+	font-family: sans-serif;
+	font-style: inherit;
+	font-weight:700;
+	color: #FF6F60;
+}

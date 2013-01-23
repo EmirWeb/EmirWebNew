@@ -1,0 +1,16 @@
+div.Table {
+	position: relative;
+	top: 100px;
+	width: 600px;
+	margin: 0 auto;
+}
+
+div.Table div.RightColumn {
+	width: 250px;
+	float: right;
+}
+
+div.Table div.LeftColumn {
+	width: 250px;
+	float: left;
+}

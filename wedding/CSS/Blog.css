@@ -1,0 +1,67 @@
+div.Container {
+	position: relative;
+	width: 960px;
+	padding-top: 0px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding-bottom: 40px;
+}
+
+div.Container div.TableOfContents {
+	font-size: 12px;
+	width: 300px;
+	float: left;
+}
+
+div.Container div.Essay {
+	padding: 0px 20px;
+	width: 620px;
+	float: left;
+	text-align: justify;
+}
+
+h1, h2 {
+	text-align:center;
+	color: #FF3000;
+}
+
+code {
+	font-size: 12px;	
+}
+
+div.Table {
+	text-align: left;
+	font-size: 12px;
+	
+}
+
+div.Table div.Row {
+}
+
+div.Table div.Row div.Header {
+	text-align: center;
+	border-bottom: 1px solid #FF3000;
+	color: #FF3000;
+}
+
+div.Table div.Row div.Column {
+	border-left: 1px solid #FF3000;
+	border-right: 1px solid #FF3000;	
+	float: left;
+	width: 175px;	
+}
+
+div.Table div.Row div.Cycle {
+	border-right: 1px solid #FF3000;
+	float: left;
+	text-align: center;
+	width: 50px;
+}
+
+img.Images {
+	display: block;
+	margin: 0 auto;
+}
