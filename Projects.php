@@ -38,7 +38,6 @@
 					echo Social::getSocialBar();
 					echo Twitter::getTwitter();
 				?>
-				
 				<br />
 				<br />
 				<br />

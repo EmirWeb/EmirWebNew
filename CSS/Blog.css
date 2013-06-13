@@ -23,22 +23,22 @@ div.Container div.Essay {
 	text-align: justify;
 }
 
-h1, h2 {
-	text-align:center;
+h1,h2 {
+	text-align: center;
 	color: #FF3000;
 }
 
 code {
-	font-size: 12px;	
+	font-size: 12px;
 }
 
 div.Table {
 	text-align: left;
 	font-size: 12px;
-	
 }
 
 div.Table div.Row {
+	
 }
 
 div.Table div.Row div.Header {
@@ -49,9 +49,9 @@ div.Table div.Row div.Header {
 
 div.Table div.Row div.Column {
 	border-left: 1px solid #FF3000;
-	border-right: 1px solid #FF3000;	
+	border-right: 1px solid #FF3000;
 	float: left;
-	width: 175px;	
+	width: 175px;
 }
 
 div.Table div.Row div.Cycle {
@@ -64,4 +64,17 @@ div.Table div.Row div.Cycle {
 img.Images {
 	display: block;
 	margin: 0 auto;
+}
+
+div.ScreenDetails div.Table table {
+	margin: 0px auto;
+}
+
+div.ScreenDetails div.Table {
+	float: left;
+	width: 310px;
+}
+
+p.Center {
+	text-align: center;
 }

@@ -33,6 +33,11 @@ class Data {
 
 	public static function getProjectPosts(){
 		$projects = array(
+		Post::getPostModel('Android Device Screen Sizes',mktime(0,0,0,16,12,2013),'This page is a compliment to the <a href="#">Screen Size</a> Android
+application. The <a href="#">client code</a> can be found on github as
+well as the <a href="#">server code</a> that receives and displays the
+data. You can also use the following <a href="#">api call</a> to pull
+the full set of data down.', "ScreenDeviceStatistics.php", "https://market.android.com/details?id=emirweb.twitterreader&feature=search_result#?t=W251bGwsMSwyLDEsImVtaXJ3ZWIudHdpdHRlcnJlYWRlciJd", "https://github.com/EmirWeb/Twitter-Reader"),
 		Post::getPostModel('Twitter Reader',mktime(0,0,0,12,22,2011),'Twitter Reader was built as a part of the <a href="AndroidTutorial.php">Android Tutorial</a>. It searches twitter for key words using the <a href="https://dev.twitter.com/docs/api/1/get/search">Twitter search API</a>.', "TwitterReader.php", "https://market.android.com/details?id=emirweb.twitterreader&feature=search_result#?t=W251bGwsMSwyLDEsImVtaXJ3ZWIudHdpdHRlcnJlYWRlciJd", "https://github.com/EmirWeb/Twitter-Reader"),
 		Post::getPostModel('Little Droid Physics',mktime(0,0,0,12,25,2011),'The idea behind droid physics was to offer a simple physics
 					environment that would aid early high school students to understand
