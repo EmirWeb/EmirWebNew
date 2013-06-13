@@ -259,7 +259,7 @@ while ($row = $results->fetch_assoc()){
 </div>
 <div class="Essay">
 <h1><?php echo ($TITLE);?></h1>
-<p>This page is a compliment to the <a href="#">Screen Size</a> Android
+<p>This page is a compliment to the <a href="https://play.google.com/store/apps/details?id=com.emirweb.screensize&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5lbWlyd2ViLnNjcmVlbnNpemUiXQ..">Screen Size</a> Android
 application. The <a href="#">client code</a> can be found on github as
 well as the <a href="#">server code</a> that receives and displays the
 data. You can also use the following <a href="#">api call</a> to pull
