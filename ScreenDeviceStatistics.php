@@ -264,13 +264,7 @@ application. The <a href="#">client code</a> can be found on github as
 well as the <a href="#">server code</a> that receives and displays the
 data. You can also use the following <a href="#">api call</a> to pull
 the full set of data down.</p>
-<?php echo($content); ?> <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
+<?php echo($content); ?></div>
 </div>
 
 <?php echo Facebook::getFacebookRoot();?>

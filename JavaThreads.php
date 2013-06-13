@@ -518,7 +518,6 @@ public class MySingleton {
 
 
 			<p></p>
-			<br /> <br /> <br /> <br />
 
 
 		</div>

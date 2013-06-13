@@ -230,11 +230,6 @@ Lets not forget <a href="http://www.boxee.tv/">Boxee</a>,
 the same potential as Google TV, but not the same focus or OEM support. 
 It will be interesting to see their individual long term success.
 				</p>
-			
-				<br />
-				<br />
-				<br />
-				<br />
 				
 			</div>
 			
