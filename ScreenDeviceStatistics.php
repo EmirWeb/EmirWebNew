@@ -141,7 +141,7 @@ function getScreenDetails($navBarHeight, $navBarWidth, $titleBarHeight, $statusB
 	// Title bar
 	$html .="<tr>";
 	$html .="<td>";
-	$html .="Title bar width: ";
+	$html .="Title bar height: ";
 	$html .="</td>";
 	$html .="<td>";
 	if ($titleBarHeight != 0){
@@ -158,7 +158,7 @@ function getScreenDetails($navBarHeight, $navBarWidth, $titleBarHeight, $statusB
 	// Status bar
 	$html .="<tr>";
 	$html .="<td>";
-	$html .="Status bar width: ";
+	$html .="Status bar height: ";
 	$html .="</td>";
 	$html .="<td>";
 	if ($statusBarHeight != 0){
