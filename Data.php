@@ -14,7 +14,9 @@ class Data {
 	public static function getBlogPosts(){
 		$blogs = array(
 
-
+				
+				
+		Post::getPostModel('Practical Android Design', mktime(0,0,0,06,19,2013) ,'I have received many mocks for Android applications that were beautiful but did not translate appropriately to devices. The mocking/design process tends to happen separately or before the development process and reconciling the two can become a timely process. Designs also set expectations and imply flows that do not always translate to the development paradigms Android enforces. Here are a few concrete steps that will help you minimize some of the churn.', "AndroidDesign.php",null,null),
 		Post::getPostModel('Google TV: The Full Monty', mktime(0,0,0,05,02,2012) ,'Some time has passed since my <a href="GoogleTV.php">initial investigation</a> of Google TV.
 		While this is still relevant, a lot is happening. <a href="http://en.wikipedia.org/wiki/Original_equipment_manufacturer">OEM</a>s are starting to
 		show their support with different Google TV implementations and Google has also kept their partners busy
