@@ -18,7 +18,6 @@ DomManager::addCSS('CSS/Social.css');
 		<title>EmirWeb</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
-		<?php echo DomManager::getScripts(); ?>
 		<?php echo Facebook::getFacebookArticleHead("Little Droid Creator"); ?>
 	</head>
 	<body>
@@ -202,5 +201,6 @@ DomManager::addCSS('CSS/Social.css');
 	</div>
 	
 		<?php echo Facebook::getFacebookRoot();?>
+		<?php echo DomManager::getScripts(); ?>
 	</body>
 </html>

@@ -10,9 +10,8 @@ class Twitter {
 	private static $VERTICAL = "vertical";
 
 	public static function getTwitter(){
-		echo '<script>';
-		include('Scripts/Utils/Twitter.js');
-		echo '</script>';
+		DomManager::addScript('Scripts/Utils/Twitter.js');
+		return '<a class="twitter-timeline"  width="300" height="300" href="https://twitter.com/PhiGammEmir" data-widget-id="347504074146582530">Tweets by @PhiGammEmir</a>';
 	}
 
 	public static function getTweetButton(){

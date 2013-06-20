@@ -23,7 +23,6 @@ DomManager::addCSS('CSS/Social.css');
 <title>EmirWeb</title>
 <link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
-		<?php echo DomManager::getScripts(); ?>
 		<?php echo Facebook::getFacebookArticleHead("Java Threads An Inconvenient Truth"); ?>
 	</head>
 <body>
@@ -524,5 +523,6 @@ public class MySingleton {
 	</div>
 	
 	<?php echo Facebook::getFacebookRoot();?>
+	<?php echo DomManager::getScripts(); ?>
 	</body>
 </html>

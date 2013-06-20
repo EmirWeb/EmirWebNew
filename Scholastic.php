@@ -15,7 +15,6 @@
 		<title>EmirWeb</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
-		<?php echo DomManager::getScripts(); ?>
 	</head>
 	<body>
 	
@@ -156,5 +155,6 @@
 				<?php echo Group::getGroups($rightColomnGroups);?>
 			</div>
 		</div>
+		<?php echo DomManager::getScripts(); ?>
 	</body>
 </html>

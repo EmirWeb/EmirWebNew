@@ -25,7 +25,7 @@ $TITLE = "Android Device Screen Sizes";
 <title>EmirWeb</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <?php echo DomManager::getCSS(); ?>
-<?php echo DomManager::getScripts(); ?>
+
 <?php echo Facebook::getFacebookArticleHead($TITLE); ?>
 </head>
 
@@ -272,6 +272,7 @@ the full set of data down.</p>
 </div>
 
 <?php echo Facebook::getFacebookRoot();?>
+<?php echo DomManager::getScripts(); ?>
 </body>
 </html>
 
@@ -279,5 +280,6 @@ the full set of data down.</p>
 <?php
 
 $database->close();
+
 
 ?>

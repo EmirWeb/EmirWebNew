@@ -19,7 +19,6 @@
 		<title>EmirWeb</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
-		<?php echo DomManager::getScripts(); ?>
 		<?php echo Facebook::getFacebookArticleHead("Google TV: The Full Monty"); ?>
 	</head>
 	<body>
@@ -235,5 +234,6 @@ It will be interesting to see their individual long term success.
 			
 		</div>
 		<?php echo Facebook::getFacebookRoot();?>
+		<?php echo DomManager::getScripts(); ?>
 	</body>
 </html>

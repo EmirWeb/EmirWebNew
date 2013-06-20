@@ -13,6 +13,7 @@ DomManager::addCSS('CSS/Body.css');
 DomManager::addCSS('CSS/Blog.css');
 DomManager::addCSS('CSS/Social.css');
 
+$TITLE = "Practical Android Design";
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -23,8 +24,7 @@ DomManager::addCSS('CSS/Social.css');
 <title>EmirWeb</title>
 <link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
-		<?php echo DomManager::getScripts(); ?>
-		<?php echo Facebook::getFacebookArticleHead("Java Threads An Inconvenient Truth"); ?>
+		<?php echo Facebook::getFacebookArticleHead($TITLE); ?>
 	</head>
 <body>
 <?php
@@ -44,7 +44,7 @@ echo NavigationBar::getNavigationBar($buttons);
 			
 		<?php  echo Social::getSocialBar(); ?>
 
-			<h2>Practical Android Design</h2>
+			<h2><?php echo $TITLE; ?></h2>
 			<ul>
 				<li><a href="#Header1">Splitting Design Up Into “Form Factors”</a></li>
 				<li><a href="#Header2">Naming Conventions</a></li>
@@ -69,7 +69,7 @@ echo NavigationBar::getNavigationBar($buttons);
 			</div>
 		<div class="Essay">
 		
-		<h1 class="Title">Practical Android Design</h1>
+		<h1 class="Title"><?php echo $TITLE; ?></h1>
 <p>
 
 I have received many mocks for Android applications that were beautiful but did not translate appropriately to devices. The mocking/design process tends to happen separately or before the development process and reconciling the two can become a timely process. Designs also set expectations and imply flows that do not always translate to the development paradigms Android enforces. Here are a few concrete steps that will help you minimize some of the churn.
@@ -415,5 +415,6 @@ Designing for android can be a difficult task if you do not approach it in an ap
 		</div>
 	
 	<?php echo Facebook::getFacebookRoot();?>
+	<?php echo DomManager::getScripts(); ?>
 	</body>
 </html>

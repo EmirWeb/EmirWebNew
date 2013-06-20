@@ -40,8 +40,6 @@
 		<title>EmirWeb</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
-		<?php echo '<script type="text/javascript">var URL = "Images/StarFighter/"; var mainContainer = "#StarFighterContainer";</script>'; ?>
-		<?php echo DomManager::getScripts(); ?>
 		<?php echo Facebook::getFacebookArticleHead("StarFighter (JavaScript)"); ?>
 	</head>
 	<body>
@@ -86,5 +84,7 @@
 			</div>
 		</div>
 		<?php echo Facebook::getFacebookRoot();?>
+		<?php echo '<script type="text/javascript">var URL = "Images/StarFighter/"; var mainContainer = "#StarFighterContainer";</script>'; ?>
+		<?php echo DomManager::getScripts(); ?>
 	</body>
 </html>

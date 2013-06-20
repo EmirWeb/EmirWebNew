@@ -20,7 +20,6 @@
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo Facebook::getFacebookBlogHead("EmirWeb"); ?>
 		<?php echo DomManager::getCSS(); ?>		
-		<?php echo DomManager::getScripts(); ?>
 	</head>
 	<body>
 		<?php 
@@ -56,5 +55,6 @@
 			</div>
 		</div>
 		<?php echo Facebook::getFacebookRoot();?>
+		<?php echo DomManager::getScripts(); ?>
 	</body>
 </html>

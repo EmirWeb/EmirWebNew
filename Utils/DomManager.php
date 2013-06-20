@@ -5,6 +5,7 @@ class DomManager {
 	private static $scriptKey = 'SCRIPTS';
 
 	private static function addToDom($value, $key){
+		
 		if (empty($value) || empty($key)){
 			return;
 		}

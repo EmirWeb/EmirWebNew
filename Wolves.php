@@ -18,7 +18,6 @@ DomManager::addCSS('CSS/Social.css');
 		<title>EmirWeb</title>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<?php echo DomManager::getCSS(); ?>
-		<?php echo DomManager::getScripts(); ?>
 		<?php echo Facebook::getFacebookArticleHead("AAAGHHH -Blew it on 5 wolves....."); ?>
 	</head>
 	<body>
@@ -134,5 +133,6 @@ FURP
 	</div>
 	
 		<?php echo Facebook::getFacebookRoot();?>
+		<?php echo DomManager::getScripts(); ?>
 	</body>
 </html>

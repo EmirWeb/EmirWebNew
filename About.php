@@ -7,7 +7,7 @@
 	include_once('Widgets/NavigationBar.php');
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/Resume.css');
-	DomManager::addScript('Scripts/Home.js');
+	DomManager::addScript('Scripts/About.js');
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
