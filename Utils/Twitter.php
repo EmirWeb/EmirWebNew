@@ -47,7 +47,9 @@ class Twitter {
 			$return .= ' data-text="' . $text . '"';
 		}
 
-		$return .= '>Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>';
+		$return .= '>Tweet</a>';
+		DomManager::addScript("//platform.twitter.com/widgets.js");
+		
 		return $return;
 	}
 
