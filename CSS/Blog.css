@@ -76,6 +76,15 @@ div.ScreenDetails div.Table {
 	width: 310px;
 }
 
+*.Center{
+	margin: 0px auto;
+}
+
 p.Center {
 	text-align: center;
+}
+
+td {
+	padding-left: 15px;
+	padding-right: 15px;
 }

@@ -89,13 +89,13 @@ If you are looking to cut down on the number of form factors, simply group 5” 
 <h2 id="Header2">Naming Conventions</h2>
 <p>
 
-Before we can start talking about more advanced topics, it is important to know how Android wants you to organise your assets. Every device type you target has a specially named assets folder, you’ll see more detailed ones below, but here are a few examples:
+Before we can start talking about more advanced topics, it is important to know how Android wants you to organise your assets. Every device type you target has a specially named assets folder, you’ll see more detailed ones <a href="#Header5">below</a>, here are a few examples:
 <ul>
 <li>drawable-hdpi/</li>
 <li>drawable-xhdpi/</li>
 </ul>
 
-When you are making an asset, please make sure you put an appropriately sized copy in each folder, we’ll discuss picking the sizes later. For example, if you made an icon at 72x72 pixels and one at 96x96 pixels, put a copy of each of those icons in their appropriate folder. The 72x72 in the hdpi folder and the 96x96 in the xhdpi folder. These two assets must have the same name or android will not be able to choose the appropriate asset at runtime.
+When you are making an asset, please make sure you put an appropriately sized copy in each folder, we’ll discuss picking the sizes <a href="Header4">later</a>. For example, if you made an icon at 72x72 pixels and one at 96x96 pixels, put a copy of each of those icons in their appropriate folder. The 72x72 in the hdpi folder and the 96x96 in the xhdpi folder. These two assets must have the same name or android will not be able to choose the appropriate asset at runtime.
 Example:
 
 <ul>
@@ -135,7 +135,7 @@ loginscreen_actionbaricon_search.png
 With the large fragmentation of screen sizes across Android devices, it practically becomes impossible to design with all screens in mind. Google gives you a lot of information about different screen resolutions and pixel densities that you should understand and follow. On the other hand, I find that keeping all of these details in mind when designing is difficult. So here are the tricks: 
 </p>
 <p>
-Pick the form factors you want to support. As a rule of thumb, always start with phones as they cover the majority of the market and their designs can easily be ported to bigger devices. Pick any of the phones on this page and use their resolution. Design for that phone and that resolution. Then repeat the process with the other form factors. Make sure you note the differences in height and width when including the status bar, nav bar and title bar. 
+Pick the form factors you want to support. As a rule of thumb, always start with phones as they cover the majority of the market and their designs can easily be ported to bigger devices. Pick any of the phones on <a href="http://www.emirweb.com/ScreenDeviceStatistics.php">this page</a> and use their resolution. Design for that phone and that resolution. Then repeat the process with the other form factors. Make sure you note the differences in height and width when including the status bar, nav bar and title bar. 
 </p>
 <p>
 Important notes for those pixel pushers out there:
@@ -164,18 +164,18 @@ Now that you have a design for each form factor, do not try to be pixel perfect 
 
 <p>Android has dpi “buckets” for each device based on their resolutions and pixel densities:
 </p>
-<p>
+<p class="Center">
 nodpi ldpi mdpi tvdpi hdpi xhdpi xxhdpi
 </p>
 <p>
 
-The goal of these buckets is to ensure that an asset in the mdpi folder is the same physical size across all devices. This means that if an asset appears 3x3cm large on device A, it will appear (approximately) 3x3cm large on device B regardless of the devices specifications. 
+The goal of these buckets is to ensure that an asset in the mdpi folder is the same physical size across all devices. This means that if an asset in the mdpi folder appears 3x3cm large on device A, it will appear (approximately) 3x3cm large on device B regardless of the devices specifications. 
 </p>
 <p>
 The reason behind the different buckets is to ensure that when certain assets shrink or grow to fit into the right physical size, that they do not appear pixelated or lose fidelity, respectively. To ensure that your assets look good on all devices and are the same physical size, you should cut an asset for each dpi bucket using the following ratios:
 </p>
-<p>
-<table>
+<p >
+<table class="Center">
 <tr>
 <td>
 xxhdpi
@@ -228,7 +228,9 @@ On a non design point, having the right sized assets for the appropriate dpi buc
 <h2 id="Header5">Form Factors And Their DPI “Buckets”</h2>
 
 <p>
-Now that we have designed for each form factor and we know how to cut our assets, notice that we have the same named asset for an xhdpi phone as an xhdpi tablet, but they are of different sizes. There are several ways to target just the right form factor and dpi bucket, I recommend using the following folder names associated with their respective form factors, there is a lot of folders, do not worry about filling all of them up. We will discuss which ones you need to fill out later:
+Now that we have designed for each form factor and we know how to cut our assets, notice that we have the same named asset for an xhdpi phone as an xhdpi tablet, but they are of different sizes. 
+There are several ways to target just the right form factor and dpi bucket. I recommend using the folder names below associated with their respective form factors. There are a lot of folders, do not worry about filling all of them up. 
+We will discuss which ones you need to fill out in the next section.
 </p>
 <p>
 <table>
@@ -360,56 +362,98 @@ drawable-sw720dp-xxhdpi/
 
 <h2 id="Header6">Recap Of Designing For "Form Factors" And DPI "Buckets"</h2>
 <p>
-Recall we first designed all of our form factors, we then learned how to get the best fidelity for each asset using dpi buckets and now we have folders that tie in form factors to dpi buckets. For best results at runtime in terms of responsiveness and visual fidelity, you want to fill out each of these buckets. Although this will probably make downloading your application annoying as filling all these folders will make your application very large. Instead you should choose one or two folder(s) for each of the form factors you wish to support and put assets in those folders. Then decide if specific assets do not have adequate fidelity on the devices you wish to target. 
+Recall we first designed all of our form factors, we then learned how to get the best fidelity for each asset using dpi buckets and now we have folders that tie in form factors to dpi buckets. For best results at runtime in terms of responsiveness and visual fidelity, you want to fill out each of these buckets. Keep in mind that filling all these folders can make your application very large. You should choose one or two folder(s)/DPI buckets for each of the form factors you wish to support and put assets in those folders. Then decide if specific assets do not have adequate fidelity on the devices you are targeting. 
 </p>
 <h2 id="Header7">Screen Ratios</h2>
 
 <p>
-Devices do not follow any rules when it comes to screen rations, title bar size, status bar size or nav bar size and location. It is important to know what widths and heights you are dealing with when designing. You should be aware of the largest/smallest physical widths/heights for each form factor. And spend time designing layouts that stretch and fit appropriately on both extremes. Do not design a layout that barely fits all the information on one screen as there is guaranteed to be a device that will not be able to handle the size you designed for. A use of appropriately stretching sections and margins is more powerful than using a scrolling section to fit your content. More on scrolling below. 
+Devices do not follow any rules when it comes to screen ratio, title bar size, status bar size or nav bar size and location. It is important to know what widths and heights you are dealing with when designing. You should be aware of the largest/smallest physical and pixel widths/heights for each form factor. 
+Spend time designing layouts that stretch and fit appropriately on both extremes. Do not design a layout that barely fits all the information on one screen as there is guaranteed to be a device that
+ will not be able to handle the size you designed for. A use of appropriately stretching sections and margins is more powerful than using a scrolling section to fit your content. 
+ More on scrolling <a href="#Header9">below</a>. 
 </p>
 <h2 id="Header8">
 Fragments</h2>
 
 <p>
-Android introduced the concept of Fragments when it released their first set of tablets. Developers use these all the time to accomplish design, getting familiar with them and designing for them in your mocks will push your application to the next level.
+Android introduced the concept of Fragments when it released their first set of tablets. 
+Developers use these all the time to marry design with data. Getting familiar with them and designing for them in your mocks will push your application to the next level.
 </p>
 <p>
-Fragments are a very powerful way to solve for designs across form factors. Fragments are literally “fragments of the screen”, they are boxes that contain data. Imagine a screen where you have a scores section and a teams section. Draw an imaginary box around each of them, or a literal one, and designate them as Fragments. Fragments define such a section by holding data and displaying it appropriately. They can be treated as individual pieces of UI. You can and should design for a Fragment the same way you would treat an asset or screen for a form factor.
+Fragments are a very powerful way to solve for designs across form factors. 
+Fragments are literally “fragments of the screen”, they are boxes that contain data. 
+Imagine a screen where you have a scores section and a teams section. 
+Draw an imaginary box around each of them, or a literal one, and designate them as Fragments.
+Now cut and paste them between form factors changing everything from layout to position of the actual fragments on a screen but not changing anything inside the cut out pieces.
+</p>
+<p> 
+Fragments define such a section by holding data and displaying it appropriately. 
+They can be treated as individual pieces of UI. 
+You can and should design for a Fragment the same way you would treat an asset or screen for a form factor. 
 </p>
 <p>
-Fragments have the ability to choose their layout in the same way a screen layout does (based on form factor, dpi bucket etc..) but they can do it completely separately from the rest of the screen. In other words the best way to design a fragment is to detach it from everything else you are doing, lay it out for each form factor and then put it back into the UI as you would any other asset.
+Fragments have the ability to choose their layout in the same way a screen layout does (based on form factor, dpi bucket etc..) but they can do it separately from the rest of the screen. 
+In other words the best way to design a fragment is to detach it from everything else you are doing, lay it out for each form factor and then put it back into the UI as you would any other asset.
 </p>
 <p>
-A modern Android design for fragments, is one that assumes that the fragment will be the approximately the same physical size on all devices/form factors. If a fragment takes up the whole screen on a phone, when it got to the 5”,7” and 10” devices, it would still be the same physical size, but positioned appropriately. On a 5”/7”, it may be centered with a background appearing past the margins/borders of the fragment. On 10” devices it might appear with a few other fragments that have been appropriately spaced out. A great example of this can be seen in the Google IO 2013 application. A fragment that on phones is full screened, gets its own section on the 7” and 10” form factors and is approximately the same size.
+A modern Android design for fragments, is one that assumes that the fragment will be the approximately the same physical size on all devices/form factors.</p>
+<p> 
+As an example, if a fragment takes up the whole screen on a phone, when it got to the 5”,7” and 10” devices, it would still be the same physical size, but positioned appropriately.
+On a 5”/7”, it may be centered with a background appearing past the margins/borders of the fragment. 
+On 10” devices it might appear with a few other fragments that have been appropriately spaced out. 
+A great example of this can be seen in the Google IO 2013 application. 
+A fragment that on phones is full screened, gets its own section on the 7” and 10” form factors and is approximately the same size.
 </p>
+
+<img width="200px" src="Images/AndroidDesign/phoneioscreenshot.png">
+<img width="400px" src="Images/AndroidDesign/7landscapeinchioscreenshot.png">
 <h2 id="Header9">Scrolling</h2>
 
 <p>
-There are two types of scrolling. Scrolling a variable set of similar items is efficient (smooth scrolling) and a great use of space when it comes to a variable width or height. Think of the gmail app that has emails (similar items) below an action bar which does not change height. The emails section, by scrolling, ensures that devices with different heights will always make the best use of the vertical space. Scrolling a static page, the way a web site would, with no variable content is inefficient (choppy scrolling) and not a smart way to use space. This option usually indicates that you have attempted to squeeze too much information on one screen and you should consider splitting the information. Consider using fragments to solve the issue, a flow that would be one page on a tablet, could be two pages on the phone.
+There are two types of scrolling. Scrolling a variable set of similar items is efficient (smooth scrolling) and a great use of space when it comes to a variable width or height. 
+Think of the gmail app, it has emails (similar items) below an action bar, which does not change height. The emails section, by scrolling, ensures that devices with different heights will 
+always make the best use of the vertical space.</p>
+<p>
+Scrolling a static page, the way a web site would, with no variable content is inefficient (choppy scrolling) and not a smart way to use space.
+This option usually indicates that you have attempted to squeeze too much information on one screen and you should consider splitting the information. 
+Consider using fragments to solve the issue, a flow that would be one page on a tablet, could be two pages on the phone.
+</p>
+<p>
+If you must scroll to fit your data on one page, be creative about what scrolls and how. Introduce a parallax effect, for example. Have two pieces of UI scrolling at different speeds and having one ultimately end up on top of the other. 
+This lets you fit all your information on one screen without looking like a website.
 </p>
 
 <h2 id="Header10">Title Bars And Keyboards Oh My!</h2>
 
 <p>
-Users like having access to their status bar, they need access to their nav bar and most users like having access to the title/action bar. That is 3 bars for those who are counting, add the keyboard to that, how much real estate does that leave? 
+Users like having access to their status bar, they need access to their nav bar and most users like having access to the title/action bar. 
+That is 3 bars for those who are counting, add the keyboard to that... How much real estate does that leave you with? 
 </p>
 <p>
-This is purely opinion, but from experience, I find that tab bars not only look bad but take up real estate that you can’t spare, especially when in landscape mode or with the keyboard up. For those still keeping count, that becomes 4 bars and a keyboard. 
+This is purely opinion, but from experience, I find that tab bars not only look bad but take up real estate that you can’t spare, especially when in landscape mode or with the keyboard up.
+For those still keeping count, that becomes 4 bars and a keyboard. So please avoid them. 
 </p>
 <p>
-The left menu panel that slides in is by far the best navigation aide in terms of UI and UX, so please use it. Similarly, the overflow menu or a drop down (spinner) from the action/title bar is also a very smart way of using the space you are given.
+The left menu panel sliding in is by far the best navigation aide in terms of UI and UX, so please use it. 
+Similarly, the overflow menu or a drop down (spinner) from the action/title bar is also a very smart way of using the space you are given.
 </p>
 <h2 id="Header11">
 Flat Colors and Assets</h2>
 
 <p>
-Android designs tend to be flat and rectangular. Do not cut assets for things with flat colors, borders or simple gradients. Android is designed to handle these efficiently. They will look better and draw faster if you let Android build the graphics for you. In these cases, pass down colors, sizes, etc..  and let the development team do the work in XML. Only cut assets that the developer can not draw using code, ie icons, graphics. Buttons and such can usually be drawn via XML, don’t be afraid to challenge the development team.
+Android designs tend to be flat and rectangular. 
+Do not cut assets for things with flat colors, borders or simple gradients. 
+Android is designed to handle these efficiently. 
+They will look better and draw faster if you let Android build the graphics for you. 
+In these cases, define colors, sizes, etc..  and let the development team do the work in XML. 
+Only cut assets that the developer can not draw using code such as icons, graphics, etc... Buttons and such can usually be drawn via XML, don’t be afraid to challenge the development team.
 </p>
 <h2 id="Header12">
 Conclusion</h2>
 
 <p>
-Designing for android can be a difficult task if you do not approach it in an appropriate manner. Following the guidelines above, will not solve all of your problems, but will help you get better results faster. More importantly, it will translate directly into Android development paradigms and make conversations and flow easier between developers and designers.
+Designing for android can be a difficult task if you do not approach it in the right manner. Following the guidelines above, will not solve all of your problems, but will help you get better results faster. 
+More importantly, it will translate directly into Android development paradigms and make conversations, flow and timelines easier between/for developers and designers.
 	</p>	
 		
 		</div>
