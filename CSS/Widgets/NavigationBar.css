@@ -61,6 +61,7 @@ div.NavigationBar div.NavigationBarContainer div.Chosen {
 }
 
 div.NavigationBar div.NavigationBarContainer a {
+	float:right;
 	text-decoration: none;
 }
 

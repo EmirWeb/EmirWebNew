@@ -46,14 +46,14 @@ echo NavigationBar::getNavigationBar($buttons);
 
 			<h2><?php echo $TITLE; ?></h2>
 			<ul>
-				<li><a href="#Header1">Splitting Design Up Into “Form Factors”</a></li>
+				<li><a href="#Header1">Splitting Design Up Into "Form Factors"</a></li>
 				<li><a href="#Header2">Naming Conventions</a></li>
 			</ul>
 			<h2>Screen sizes</h2>
 			<ul>
 				<li><a href="#Header3">Designing For Form Factors</a></li>
-				<li><a href="#Header4">DPI “Buckets”</a></li>
-				<li><a href="#Header5">Form Factors And Their DPI “Buckets”</a></li>
+				<li><a href="#Header4">DPI "Buckets"</a></li>
+				<li><a href="#Header5">Form Factors And Their DPI "Buckets"</a></li>
 				<li><a href="#Header6">Recap Of Designing For "Form Factors" And DPI "Buckets"</a></li>
 				<li><a href="#Header7">Screen Ratios</a></li>
 				
@@ -74,17 +74,17 @@ echo NavigationBar::getNavigationBar($buttons);
 
 I have received many mocks for Android applications that were beautiful but did not translate appropriately to devices. The mocking/design process tends to happen separately or before the development process and reconciling the two can become a timely process. Designs also set expectations and imply flows that do not always translate to the development paradigms Android enforces. Here are a few concrete steps that will help you minimize some of the churn.
 </p>
-<h2 id="Header1">Splitting Design Up Into “Form Factors”</h2>
+<h2 id="Header1">Splitting Design Up Into "Form Factors"</h2>
 <p>
 There are 4 form factors that you should be designing for:
 <ul>
 <li> Regular sized phones (phones)</li>
-<li> Over sized phones (5” phones) </li>
-<li> Mid sized tablets (7” tablets)</li>
-<li> Regular sized tablets (10” tablets) </li>
+<li> Over sized phones (5" phones) </li>
+<li> Mid sized tablets (7" tablets)</li>
+<li> Regular sized tablets (10" tablets) </li>
 </ul>
 
-If you are looking to cut down on the number of form factors, simply group 5” and 7” devices into their own group or group them with their closest neighbour. This doesn’t always give ideal results, but it will not ruin the user experience. We’ll get into how to best target these form factors later.
+If you are looking to cut down on the number of form factors, simply group 5" and 7" devices into their own group or group them with their closest neighbour. This doesn’t always give ideal results, but it will not ruin the user experience. We’ll get into how to best target these form factors later.
 
 <h2 id="Header2">Naming Conventions</h2>
 <p>
@@ -160,9 +160,9 @@ The nav bar does not always appear at the bottom of the screen in landscape, som
 <p>
 Now that you have a design for each form factor, do not try to be pixel perfect yet. It will not translate well later. At this point all you want to do is create general guidelines for how the application will lay out for each form factor.
 </p>
-<h2 id="Header4">DPI “Buckets”</h2>
+<h2 id="Header4">DPI "Buckets"</h2>
 
-<p>Android has dpi “buckets” for each device based on their resolutions and pixel densities:
+<p>Android has dpi "buckets" for each device based on their resolutions and pixel densities:
 </p>
 <p class="Center">
 nodpi ldpi mdpi tvdpi hdpi xhdpi xxhdpi
@@ -225,7 +225,7 @@ To recap, this will ensure that the originally designed asset appears the same p
 On a non design point, having the right sized assets for the appropriate dpi bucket will directly improve the performance of the application on devices. This is because each device is optimized in terms of processing power and memory availability with respect to its screen size. So having the appropriate dpi will optimize the fidelity and the responsiveness of the application simultaneously.
 </p>
 
-<h2 id="Header5">Form Factors And Their DPI “Buckets”</h2>
+<h2 id="Header5">Form Factors And Their DPI "Buckets"</h2>
 
 <p>
 Now that we have designed for each form factor and we know how to cut our assets, notice that we have the same named asset for an xhdpi phone as an xhdpi tablet, but they are of different sizes. 
@@ -261,7 +261,7 @@ drawable-xxhdpi/
 </ul>
 </td>
 <td>
-5” device Gingerbread assets:
+5" device Gingerbread assets:
 <ul>
 <li>
 drawable-large-ldpi/
@@ -286,7 +286,7 @@ drawable-large-xxhdpi/
 </tr>
 <tr>
 <td>
-5” device above Gingerbread assets:
+5" device above Gingerbread assets:
 <ul>
 <li> 
 drawable-sw480dp-ldpi/
@@ -309,7 +309,7 @@ drawable-sw480dp-xxhdpi/
 </ul>
 </td>
 <td>
-7” device assets:
+7" device assets:
 <ul>
 <li>
 drawable-sw600dp-ldpi/
@@ -334,7 +334,7 @@ drawable-sw600dp-xxhdpi/
 </tr>
 <tr>
 <td>
-10” device assets:
+10" device assets:
 <ul>
 <li>
 drawable-sw720dp-ldpi/
@@ -381,11 +381,12 @@ Developers use these all the time to marry design with data. Getting familiar wi
 </p>
 <p>
 Fragments are a very powerful way to solve for designs across form factors. 
-Fragments are literally “fragments of the screen”, they are boxes that contain data. 
+Fragments are literally "fragments of the screen", they are boxes that contain data. 
 Imagine a screen where you have a scores section and a teams section. 
 Draw an imaginary box around each of them, or a literal one, and designate them as Fragments.
 Now cut and paste them between form factors changing everything from layout to position of the actual fragments on a screen but not changing anything inside the cut out pieces.
 </p>
+<img class="Center" src="Images/AndroidDesign/fragments.png" />
 <p> 
 Fragments define such a section by holding data and displaying it appropriately. 
 They can be treated as individual pieces of UI. 
@@ -398,11 +399,11 @@ In other words the best way to design a fragment is to detach it from everything
 <p>
 A modern Android design for fragments, is one that assumes that the fragment will be the approximately the same physical size on all devices/form factors.</p>
 <p> 
-As an example, if a fragment takes up the whole screen on a phone, when it got to the 5”,7” and 10” devices, it would still be the same physical size, but positioned appropriately.
-On a 5”/7”, it may be centered with a background appearing past the margins/borders of the fragment. 
-On 10” devices it might appear with a few other fragments that have been appropriately spaced out. 
+As an example, if a fragment takes up the whole screen on a phone, when it got to the 5",7" and 10" devices, it would still be the same physical size, but positioned appropriately.
+On a 5"/7", it may be centered with a background appearing past the margins/borders of the fragment. 
+On 10" devices it might appear with a few other fragments that have been appropriately spaced out. 
 A great example of this can be seen in the Google IO 2013 application. 
-A fragment that on phones is full screened, gets its own section on the 7” and 10” form factors and is approximately the same size.
+A fragment that on phones is full screened, gets its own section on the 7" and 10" form factors and is approximately the same size.
 </p>
 
 <img width="200px" src="Images/AndroidDesign/phoneioscreenshot.png">
