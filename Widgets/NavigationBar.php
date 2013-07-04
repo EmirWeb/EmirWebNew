@@ -60,7 +60,7 @@ class NavigationBar {
 	</div>';
 			}
 		}
-		return $navigationBar . "\n</div></div></div>\n";
+		return $navigationBar . "\n<div class='Clear'></div></div></div></div>\n";
 	}
 
 	public static function getCell($link, $text, $title, $isChosen){
