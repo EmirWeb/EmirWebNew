@@ -84,8 +84,9 @@ There are 4 form factors that you should be designing for:
 <li> Regular sized tablets (10" tablets) </li>
 </ul>
 
-If you are looking to cut down on the number of form factors, simply group 5" and 7" devices into their own group or group them with their closest neighbour. This doesn’t always give ideal results, but it will not ruin the user experience. We’ll get into how to best target these form factors later.
 
+If you are looking to cut down on the number of form factors, simply group 5" and 7" devices into their own group or group them with their closest neighbour. This doesn’t always give ideal results, but it will not ruin the user experience. We’ll get into how to best target these form factors later.
+</p>
 <h2 id="Header2">Naming Conventions</h2>
 <p>
 
@@ -95,7 +96,7 @@ Before we can start talking about more advanced topics, it is important to know 
 <li>drawable-xhdpi/</li>
 </ul>
 
-When you are making an asset, please make sure you put an appropriately sized copy in each folder, we’ll discuss picking the sizes <a href="Header4">later</a>. For example, if you made an icon at 72x72 pixels and one at 96x96 pixels, put a copy of each of those icons in their appropriate folder. The 72x72 in the hdpi folder and the 96x96 in the xhdpi folder. These two assets must have the same name or android will not be able to choose the appropriate asset at runtime.
+When you are making an asset, please make sure you put an appropriately sized copy in each folder, we’ll discuss picking the sizes <a href="#Header4">later</a>. For example, if you made an icon at 72x72 pixels and one at 96x96 pixels, put a copy of each of those icons in their appropriate folder. The 72x72 in the hdpi folder and the 96x96 in the xhdpi folder. These two assets must have the same name or android will not be able to choose the appropriate asset at runtime.
 Example:
 
 <ul>
@@ -137,6 +138,12 @@ With the large fragmentation of screen sizes across Android devices, it practica
 <p>
 Pick the form factors you want to support. As a rule of thumb, always start with phones as they cover the majority of the market and their designs can easily be ported to bigger devices. Pick any of the phones on <a href="http://www.emirweb.com/ScreenDeviceStatistics.php">this page</a> and use their resolution. Design for that phone and that resolution. Then repeat the process with the other form factors. Make sure you note the differences in height and width when including the status bar, nav bar and title bar. 
 </p>
+<h3>Navigation (Nav) bars</h3>
+<img class="Center" src="Images/AndroidDesign/navbar.png" />
+<h3>Action/Title Bar</h3>
+<img class="Center" src="Images/AndroidDesign/actionbar.png" />
+<h3>Status Bar</h3>
+<img class="Center" src="Images/AndroidDesign/statusbar.png" />
 <p>
 Important notes for those pixel pushers out there:
 <ul>
@@ -217,6 +224,9 @@ ldpi
 </td>
 </tr>
 </table>
+</p>
+<p>
+<a target="_blank" href="http://coh.io/adpi/">Here</a> is a good tool to help you out with these calculations. 
 </p>
 <p>
 To recap, this will ensure that the originally designed asset appears the same physical size on all devices and is the right fidelity for each pixel density. 
@@ -386,7 +396,7 @@ Imagine a screen where you have a scores section and a teams section.
 Draw an imaginary box around each of them, or a literal one, and designate them as Fragments.
 Now cut and paste them between form factors changing everything from layout to position of the actual fragments on a screen but not changing anything inside the cut out pieces.
 </p>
-<img class="Center" src="Images/AndroidDesign/fragments.png" />
+<img src="Images/AndroidDesign/fragments.png" />
 <p> 
 Fragments define such a section by holding data and displaying it appropriately. 
 They can be treated as individual pieces of UI. 
