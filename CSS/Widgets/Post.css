@@ -23,6 +23,14 @@ div.Post div.Title {
 	text-decoration: none;
 }
 
+div.Post div.Title a{
+	color: #4c4c4c;
+}
+
+div.Post div.Title a:hover{
+	color: #0099cc;
+}
+
 div.Post {
 	padding: 20px 0px;
 	border-bottom: 1px dotted #E7E2DC;
