@@ -465,7 +465,8 @@ Conclusion</h2>
 <p>
 Designing for android can be a difficult task if you do not approach it in the right manner. Following the guidelines above, will not solve all of your problems, but will help you get better results faster. 
 More importantly, it will translate directly into Android development paradigms and make conversations, flow and timelines easier between/for developers and designers.
-	</p>	
+	</p>
+	
 		
 		</div>
 	
