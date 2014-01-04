@@ -25,7 +25,7 @@ div.NavigationBar div.NavigationBarContainer div.NavigationBarButtonContainer
 
 div.NavigationBar div.NavigationBarContainer div.Title {
 	float: left;
-	color: #FA4100;
+	color: #0099cc;
 	letter-spacing: -1px;
 	text-transform: lowercase;
 	font-size: 45px;
@@ -57,7 +57,7 @@ div.NavigationBar div.NavigationBarContainer div.Button {
 }
 
 div.NavigationBar div.NavigationBarContainer div.Chosen {
-	background-color: #F34600;
+	background-color: #0099cc;
 	cursor: auto;
 }
 
@@ -68,5 +68,5 @@ div.NavigationBar div.NavigationBarContainer a {
 
 div.NavigationBar div.NavigationBarContainer div.Button:hover {
 	position: relative;
-	background-color: #F34600;
+	background-color: #0099cc;
 }
