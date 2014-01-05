@@ -9,9 +9,10 @@ div.NavigationBar {
 
 div.NavigationBarContainer {
 	position: relative;
-	width: 960px;
+	width: 100%;
 	margin: 0px auto;
 	padding: 0px;
+	
 }
 
 div.NavigationBar div.NavigationBarContainer div.NavigationBarButtonContainer
@@ -21,6 +22,7 @@ div.NavigationBar div.NavigationBarContainer div.NavigationBarButtonContainer
 	padding: 0px;
 	clear: both;
 	min-width: 500px;
+	margin-right: 100px;
 }
 
 div.NavigationBar div.NavigationBarContainer div.Title {
@@ -30,6 +32,7 @@ div.NavigationBar div.NavigationBarContainer div.Title {
 	text-transform: lowercase;
 	font-size: 45px;
 	font-weight: normal;
+	margin-left: 100px;
 }
 
 div.NavigationBar div.NavigationBarContainer div.Title span {

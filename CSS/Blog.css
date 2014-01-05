@@ -3,12 +3,12 @@ div.Container {
 	position: relative;
 	width: 960px;
 	padding-top: 0px;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 40px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
-	padding-bottom: 40px;
 }
 
 div.Container div.TableOfContents {
@@ -88,4 +88,23 @@ p.Center {
 td {
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+@media all and (max-width: 1100px) {
+	
+	div.Container div.TableOfContents {
+		display: none;
+	}
+	
+	div.Container {
+		max-width: 100%;
+		width: 100%;
+	}
+	
+	div.Container div.Essay{
+		float: none;
+		width: auto;
+		margin-right: 50px;
+		margin-left: 50px;
+	}
 }

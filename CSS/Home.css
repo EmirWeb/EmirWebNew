@@ -2,7 +2,7 @@ div.Content {
 	position: relative;
 	font-size: 12px;
 	padding-top: 30px;
-	width: 1160px;
+	width: 1000px;
 	margin: 0 auto;
 }
 
@@ -10,13 +10,28 @@ div.Content div.SideBar {
 	position: relative;
 	width: 300px;
 	float: left;
-	margin-left: 100px;
 }
 
 div.Content div.Posts {
 	position: relative;
-	margin-right: 100px;
 	width: 600px;
 	float: right;
+}
+
+@media all and (max-width: 1100px) {
+	div.Content div.SideBar {
+		display: none;
+	}
+	
+	div.Content {
+		width: auto;
+	}
+	
+	div.Content div.Posts {
+		margin-right: 50px;
+		margin-left: 50px;
+		width: auto;
+		float: none;
+	}
 }
 

@@ -16,19 +16,33 @@ div.Post div.Date {
 	padding-bottom: 20px;
 }
 
+div.Post div.Images {
+	float: left;
+}
+
+div.Post  img {
+	margin-right: 10px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 10px;
+}
+
+div.Post a {
+	color: #4c4c4c;
+}
+
+div.Post a:hover {
+	color: #0099cc;
+}
+
+div.Post a img:hover {
+	border-color: #0099cc;
+}
+
 div.Post div.Title {
 	font-size: 33px;
 	letter-spacing: -.5px;
-	color: #4c4c4c;
 	text-decoration: none;
-}
-
-div.Post div.Title a{
-	color: #4c4c4c;
-}
-
-div.Post div.Title a:hover{
-	color: #0099cc;
 }
 
 div.Post {
@@ -36,10 +50,18 @@ div.Post {
 	border-bottom: 1px dotted #E7E2DC;
 }
 
-div.Post div.ReadMoreLink {
+div.Post div.Twitter {
 	float: left;
 }
 
-div.Post div.Twitter {
-	float: left;
+div.Post img.Thumbnail {
+	width: 300px;
+	height: 225px;
+}
+
+@media all and (max-width: 1100px) {
+	div.Post img.Thumbnail {
+		width: 400px;
+		height: 300px;
+	}
 }
