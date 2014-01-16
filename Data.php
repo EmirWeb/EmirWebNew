@@ -13,7 +13,10 @@ class Data {
 
 	public static function getBlogPosts(){
 		$blogs = array(
+		
+		
 
+		Post::getPostModel('The power and structure of push: A second screen solution.', mktime(0,0,0,01,05,2014) ,'<a href="http://en.wikipedia.org/wiki/Second_screen">Second screen</a> has been a buzzword for quite some time and rightfully so. Getting our tech gadgets to work as one has always been a desire. With the adoption of phones as the dominant personal computer over the last few years, we\'ve naturally wanted to connect everything to them.', "SecondScreen.php",null,null, 'Images/SecondScreen/thumbnail.png'),
 		Post::getPostModel('My Google Glass Interview on "The Lang & O\'Leary Exchange".', mktime(0,0,0,07,19,2013) ,'Toronto technology firm Xtreme Labs got its hands on Google\'s latest invention: a hands-free wearable computer that looks like glasses.', "http://www.cbc.ca/player/News/TV+Shows/Lang+%26+O%27Leary+Exchange/ID/2397482913/",null,null, 'Images/GoogleGlass/thumbnail.png'),
 		Post::getPostModel('Clicks and Glass: Four Things to Consider When Developing Apps for Google Glass.', mktime(0,0,0,07,05,2013) ,'You\'ve seen the reviews, the keynotes, the videos and the endless debates on whether this sci-fi tech-like innovation is a solution, a problem, or just an unfinished idea. Yet, we all can agree that Google\'s Project Glass, deemed to be the next hot personal computing device after iPhone\'s big break in 2007 and lauded to be at the forefront of technology for years to come, has the attention of the entire world. Consumers and professionals of all kinds are gawking at the ability to connect to the digital world with literally the blink of an eye.
 Yet, Google Glass is still out of reach for most.', "GoogleGlass.php",null,null, 'Images/GoogleGlassClick/thumbnail.png'),
@@ -37,6 +40,9 @@ Yet, Google Glass is still out of reach for most.', "GoogleGlass.php",null,null,
 
 	public static function getProjectPosts(){
 		$projects = array(
+		Post::getPostModel('Device Wall: A second screen experiment.',mktime(0,0,0,16,01,2014),'Recently <a href="http://pivotallabs.com/">Pivotal Labs</a> decided to push mobile devices to the limit by connecting multiple devices to one other in order to have them behave as one. Through the use of image recognition, optical character recognition, persistent low cost connections and a whole lot of ingenuity Pivotal Labs was able to put together an innovative and unique experience. Below, we have collected all the accounts of the key individuals involved in bringing to life this piece of innovation and technology.',
+		 "DeviceWall.php", null, "https://github.com/EmirWeb/DeviveWallSuite", 'Images/DeviceWall/thumbnail.png'),
+		
 		Post::getPostModel('Android Device Screen Sizes',mktime(0,0,0,6,12,2013),'This page is a compliment to the <a href="#">Screen Size</a> Android
 application. The <a href="https://github.com/EmirWeb/ScreenSize">client code</a> can be found on github as
 well as the <a href="https://github.com/EmirWeb/ScreenSizeServer">server code</a> that receives and displays the
