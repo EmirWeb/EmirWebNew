@@ -55,6 +55,7 @@ echo NavigationBar::getNavigationBar($buttons);
 		<div class="Essay">
 		
 		<h1 class="Title"><?php echo $TITLE; ?></h1>
+<p>Also posted <a href="http://emirweb.com/DeviceWall.php">on the Pivotal Labs blog</a>.</p>
 <p>Recently <a href="http://pivotallabs.com/">Pivotal Labs</a> decided to push mobile devices to the limit by connecting multiple devices to one other in order to have them behave as one. Through the use of image recognition, optical character recognition, persistent low cost connections and a whole lot of ingenuity Pivotal Labs was able to put together an innovative and unique experience. Below, we have collected all the accounts of the key individuals involved in bringing to life this piece of innovation and technology.</p>
 <h2 id="Header1">How we did it</h2>
 <p>Engineers at Pivotal Labs came up with an idea to use multiple devices to orchestrate a unique <b>unified experience</b>. With so many people interested in contributing to this idea, a hackathon ensued where engineers worked in groups, each group contributing on the separate pieces needed to make this happen. 
@@ -104,7 +105,7 @@ We crop each screen individually from the picture, using <a href="http://www.ima
 then run the open source optical character recognition (<a href="http://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a>) program <a href="https://code.google.com/p/tesseract-ocr/">Tesseract</a> 
 to detect the two digit id in the middle of the screen. 
 We used two digits since it greatly improved the accuracy over using single digit numbers.</p>
-<p>Finally we can match the id to each virtual screen and we can determint the relative position of the screens to their corresponding virtual screen. 
+<p>Finally we can match the id to each virtual screen and we can determine the relative position of the screens to their corresponding virtual screen. 
 We write all this out into a <a href="http://www.json.org/">JSON</a> string, which the server will use to cut an image up and deliver to the devices.</p>
 <h2 id="Header5">The Process</h2>
 <p><img class="Images" src="Images/DeviceWall/FindSquaresStep0.png" width="500px"/></p>
