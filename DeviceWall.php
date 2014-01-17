@@ -56,7 +56,6 @@ echo NavigationBar::getNavigationBar($buttons);
 		
 		<h1 class="Title"><?php echo $TITLE; ?></h1>
 		<p>Also posted at <a href="http://pivotallabs.com/device-wall-second-screen-experiment/">Pivotal Labs</a></p>
-<p>Also posted <a href="http://emirweb.com/DeviceWall.php">on the Pivotal Labs blog</a>.</p>
 <p>Recently <a href="http://pivotallabs.com/">Pivotal Labs</a> decided to push mobile devices to the limit by connecting multiple devices to one other in order to have them behave as one. Through the use of image recognition, optical character recognition, persistent low cost connections and a whole lot of ingenuity Pivotal Labs was able to put together an innovative and unique experience. Below, we have collected all the accounts of the key individuals involved in bringing to life this piece of innovation and technology.</p>
 <h2 id="Header1">How we did it</h2>
 <p>Engineers at Pivotal Labs came up with an idea to use multiple devices to orchestrate a unique <b>unified experience</b>. With so many people interested in contributing to this idea, a hackathon ensued where engineers worked in groups, each group contributing on the separate pieces needed to make this happen. 
