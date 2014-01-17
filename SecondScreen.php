@@ -69,6 +69,7 @@ echo NavigationBar::getNavigationBar($buttons);
 		<div class="Essay">
 		
 		<h1 class="Title"><?php echo $TITLE; ?></h1>
+		<p>Also posted at <a href="http://pivotallabs.com/power-structure-push-second-screen-solution/">Pivotal Labs</a></p>
 <p><a href="http://en.wikipedia.org/wiki/Second_screen">Second screen</a> has been a buzzword for quite some time and rightfully so. 
 Getting our tech gadgets to work as one has always been a desire. 
 With the adoption of phones as the dominant personal computer over the last few years, we've naturally wanted to connect everything to them.</p>
