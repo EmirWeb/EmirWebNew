@@ -27,15 +27,26 @@ div.Card div.Logo {
 }
 
 div.Card div.Info {
-	text-align: right; margin : 15px;
+	text-align: right;
+	margin: 15px;
 	float: right;
 	margin: 15px;
 }
 
 @media all and (max-width: 1100px) {
-	
 	div.Card {
 		display: none;
 	}
-
+	
+	div.Content {
+		max-width: 100%;
+		width: 100%;
+	}
+	
+	div.Content div.Resume{	
+		float: none;
+		width: auto;
+		margin-right: 50px;
+		margin-left: 50px;
+	}
 }
