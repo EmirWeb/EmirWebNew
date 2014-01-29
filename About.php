@@ -50,12 +50,24 @@
 <!-- 			<p>Hardworking, reliable and friendly yet professional individual. Fluently Bilingual (English-French). </p> -->
 			<h2>Employment</h2>
 			
-			<h3><span>(May 2010)- Current </span>Agile Engineer for <a href="http://www.xtremelabs.com" target="_blank">Xtreme Labs Inc.</a> (Mobile and Web)</h3>
+			<h3><span>(October 2013)- current </span>Agile Engineer for <a href="http://pivotallabs.com/" target="_blank">Pivotal Labs</a></h3>
 			<ul>
-				<li>Held the Anchor position for several projects. This position entails communicating with the client, archetyping the software, designing the UI/UX and managing a team of developer</li>
-				<li>Worked with <a href="http://www.visibli.com" target="_blank">Visibli</a> (formerly Assetize). Created and successfully implemented dynamic toolbar/widget system. </li>
-				<li>Worked with Facebook, Google Analytics and Twitter sdk’</li>
-				<li>Worked on Blackberry and Android applications (Some of the top selling apps in the market for some of North America’s largest corporations).</li>
+				<li>Architected, developed and led a team of 7 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.mtvPrimeAndroid">MTV</a> Android application with 100,000+ downloads and a rating of 4.1. This application was featured in the play store.</li>
+			</ul>
+			
+			<h3><span>(May 2010)-(October 2013) </span>Agile Engineer for <a href="http://www.xtremelabs.com" target="_blank">Xtreme Labs Inc.</a> (Mobile and Web)</h3>
+			<ul>
+				<li>Architected, developed and led a team of 9 developers to build the <a href="https://play.google.com/store/apps/details?id=com.neat.android&hl=en">Neat &reg;</a> Android application with 10,000+ downloads and a rating of 3.6.</li>
+				<li>Architected, developed the <b>Aljazeera</b> Google TV application. No longer in market. The application was featured in the app store upon Google TV 2.0 launch.</li>
+				<li>Architected and developed the <a href="https://play.google.com/store/apps/details?id=com.xtreme.grammy">MusicMapper</a> Android application with 10,000+ downloads and a rating of 4.3 (API no longer functioning).</li>
+				<li>Built <b>Networking</b>, <b>Image Cache</b> and <b>Horizontal Scroll</b> libraries for that are used in close to 30 Android applications produced by Xtreme Labs Inc.</li>
+				<li>Lead research into <b>Google TV</b>, <b>Google Glass</b> and <b>Chromecast</b> for Xtreme Labs.</li>
+				<li>Created and lead the <b>Outreach</b> team at Xtreme Labs. The Outreach team was responsible for creating innovation projects such as the <a href="http://www.emirweb.com/DeviceWall.php">Device Wall</a>, finding and securing speaking opportunities for engineers, aiding engineers build material proposals for conferences and organizing travel for the engineers</li>
+				<li>Worked with <a href="http://sharedby.co/">SharedBy.co</a> (formerly Visibli and Assetize). Created and successfully implemented dynamic toolbar/widget system that is the basis of their product.</li>  
+				<li>Contributed heavily to training the Android team at Xtreme Labs Inc. to develop top tiered Android applications.</li>
+				<li>Developed content for the bootcamp that our interns run through as a part of their training.</li>  
+				<li>Held the Anchor position for several projects. This position entails communicating with the client, archetechting and building the software, guidig the UI/UX design and managing a team of developer.</li>
+				<li>Worked on Blackberry Android and Web applications (Some of the top selling apps in the market for some of North America’s largest corporations).</li>
 			</ul>
 			
 			<h3><span>(January 2009)-(May 2010) </span>Teaching Assistant at the <a href="http://www.utoronto.ca/" target="_blank">University of Toronto</a></h3>
@@ -66,9 +78,9 @@
 			</ul>
 			
 			
-			<h3><span>2002-Current </span> Private Tutor and Mentor for <a href="http://www.ladieslearningcode.com" target="_blank">Ladies Learning Code</a></h3>
+			<h3><span>2002-2011 </span> Private Tutor and Mentor for <a href="http://www.ladieslearningcode.com" target="_blank">Ladies Learning Code</a></h3>
 			<ul>
-				<li> Computer Organization (2010 - 2nd year course) </li>
+				<li>Computer Organization (2010 - 2nd year course) </li>
 				<li>Introduction to Computer Science I and II (2009-2010 - 1rst year courses) </li>
 				<li>Communication for computer scientists (January, 2009 - 2nd year course) </li>
 			</ul>
@@ -93,7 +105,11 @@
 			<h2>Hobbies and Extra Curricular</h2>
 			<ul>
 				<li><a href="https://github.com/EmirWeb" target="_blank">Open Source Projects</a></li>
+				<li>Led a team of 7 people and contributed by archetecting the <a href="http://www.emirweb.com/SecondScreen.php">second screen framework</a> that allowed the building of the <a href="http://www.emirweb.com/DeviceWall.php">Device Wall</a></li>
 				<li>Developed a small JavaScript game (<a href="http://www.emirweb.com/StarFighter.php" target="_blank">StarFighter</a>) to test whether modern browsers could provide an adequate level of interaction through JavaScript/CSS/JQuery while accurately depicting what a user would  expect out of a modern video game.</li>
+				<li>Spoke at the Ultimate Developer Conference about archetecting for Android and showed developers how to implenet a local REST cache. Blog post to come.</li>
+				<li>Spoke about Google TV at a <a href="https://developers.google.com/groups/">GDG</a> meet up hosted by <a href="http://bnotions.com/">BNOTIONS</a></li>
+				<li>Upkeep a blog with relevant information
 				<li>Developed a GUI factory and application for portable devices through J2ME (Java 2 Micro Edition).</li>
 				<li>I am a member of the Fraternity of Phi Gamma Delta where I have held Recording Secretary and Social chair positions. Currently I am on the Board of Chapter Advisors.</li>
 				<li>Was a part of the computer programming team at University of Toronto Mississauga (2008-2009).</li> 
@@ -105,7 +121,7 @@
 				<li>Wide array of computer skills as well as a very strong ability to learn and use new software tools.</li>
 				<li>Currently my main interests lie within lower-end programming, algorithm design and network communication</li>
 				<li>Have worked with the following languages: C(++), Java (including J2ME), Assembly, Scheme, Verilog, ML, Prolog,  Python, Visual Basic, PHP, SQL, HTML, Qbasic and JavaScript.</li>
-				<li>Comfortable with MVCs. First hand  experience with Struts2, cake-php and Android</li>   
+				<li>Very comfortable with MVC and MVVM.   
 			</ul>
 			
 			<h2>Awards</h2>
@@ -116,7 +132,7 @@
 			
 			<h2>Education</h2>
 			<ul>
-				<li>Scheduled to graduate in may of 2011 from the University of Toronto with a “Specialist in Computer Science” (Bachelors of Science Degree.</li>
+				<li>Graduated in may of 2011 from the University of Toronto with a “Specialist in Computer Science” (Bachelors of Science Degree.</li>
 				<li>Participated in the Canadian University Software Engineering Conference (CUSEC 2009).</li>
 				<li>Attended a summer program offered by U of T entitled “Computing Insights”.</li>
 				<li> Completed high school with a French immersion diploma (Knew French fluently before completing the French immersion program)</li>

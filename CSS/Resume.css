@@ -31,3 +31,11 @@ div.Card div.Info {
 	float: right;
 	margin: 15px;
 }
+
+@media all and (max-width: 1100px) {
+	
+	div.Card {
+		display: none;
+	}
+
+}
