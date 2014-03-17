@@ -53,19 +53,19 @@
 				
 				<h3><span>(October 2013)- current </span>Agile Engineer for <a href="http://pivotallabs.com/" target="_blank">Pivotal Labs</a></h3>
 				<ul>
-					<li>Architected, developed and led a team of 5 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.vh1android">VH1</a> Android application with 50,000+ downloads and a rating of 4.1.</li>
-					<li>Architected, developed and led a team of 7 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.mtvPrimeAndroid">MTV</a> Android application with 100,000+ downloads and a rating of 4.0. This application was featured in the play store.</li>
+					<li>Architected, developed and led a team of 5 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.vh1android" target="_blank">VH1</a> Android application with 50,000+ downloads and a rating of 4.1.</li>
+					<li>Architected, developed and led a team of 7 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.mtvPrimeAndroid" target="_blank">MTV</a> Android application with 100,000+ downloads and a rating of 4.0. This application was featured in the play store.</li>
 				</ul>
 				
 				<h3><span>(May 2010)-(October 2013) </span>Agile Engineer for <a href="http://www.xtremelabs.com" target="_blank">Xtreme Labs Inc.</a> (Mobile and Web)</h3>
 				<ul>
-					<li>Architected, developed and led a team of 9 developers to build the <a href="https://play.google.com/store/apps/details?id=com.neat.android&hl=en">Neat &reg;</a> Android application with 10,000+ downloads and a rating of 3.6.</li>
+					<li>Architected, developed and led a team of 9 developers to build the <a href="https://play.google.com/store/apps/details?id=com.neat.android&hl=en" target="_blank">Neat &reg;</a> Android application with 10,000+ downloads and a rating of 3.6.</li>
 					<li>Architected and developed the <b>Aljazeera</b> Google TV application. No longer in market. The application was featured in the app store upon Google TV 2.0 launch.</li>
-					<li>Architected and developed the <a href="https://play.google.com/store/apps/details?id=com.xtreme.grammy">MusicMapper</a> Android application with 10,000+ downloads and a rating of 4.3 (API no longer functioning).</li>
-					<li>Built <b>Networking</b>, <b>Image Cache</b> and <b>Horizontal Scroll</b> libraries for that are used in close to 30 Android applications produced by Xtreme Labs Inc.</li>
+					<li>Architected and developed the <a href="https://play.google.com/store/apps/details?id=com.xtreme.grammy" target="_blank">MusicMapper</a> Android application with 10,000+ downloads and a rating of 4.3 (API no longer functioning).</li>
+					<li>Built <b>Networking</b>, <b>Image Cache</b> and <a href="https://github.com/EmirWeb/parchment" target="_blank">All Purpose Scrolling</a> libraries for that are used in close to 30 Android applications produced by Xtreme Labs Inc.</li>
 					<li>Lead research into <b>Google TV</b>, <b>Google Glass</b> and <b>Chromecast</b> for Xtreme Labs.</li>
 					<li>Created and lead the <b>Outreach</b> team at Xtreme Labs. The Outreach team was responsible for creating innovation projects such as the <a href="http://www.emirweb.com/DeviceWall.php">Device Wall</a>, finding and securing speaking opportunities for engineers, aiding engineers build material proposals for conferences and organizing travel for the engineers</li>
-					<li>Worked with <a href="http://sharedby.co/">SharedBy.co</a> (formerly Visibli and Assetize). Created and successfully implemented dynamic toolbar/widget system that is the basis of their product.</li>  
+					<li>Worked with <a href="http://sharedby.co/" target="_blank">SharedBy.co</a> (formerly Visibli and Assetize). Created and successfully implemented dynamic toolbar/widget system that is the basis of their product.</li>  
 					<li>Contributed heavily to training the Android team at Xtreme Labs Inc. to develop top tiered Android applications.</li>
 					<li>Developed content for the bootcamp that our interns run through as a part of their training.</li>  
 					<li>Held the Anchor position for several projects. This position entails communicating with the client, archetechting and building the software, guidig the UI/UX design and managing a team of developer.</li>
@@ -108,9 +108,9 @@
 				<ul>
 					<li><a href="https://github.com/EmirWeb" target="_blank">Open Source Projects</a></li>
 					<li>Led a team of 7 people and contributed by archetecting the <a href="http://www.emirweb.com/SecondScreen.php">second screen framework</a> that allowed the building of the <a href="http://www.emirweb.com/DeviceWall.php">Device Wall</a></li>
-					<li>Developed a small JavaScript game (<a href="http://www.emirweb.com/StarFighter.php" target="_blank">StarFighter</a>) to test whether modern browsers could provide an adequate level of interaction through JavaScript/CSS/JQuery while accurately depicting what a user would  expect out of a modern video game.</li>
+					<li>Developed a small JavaScript game (<a href="http://www.emirweb.com/StarFighter.php">StarFighter</a>) to test whether modern browsers could provide an adequate level of interaction through JavaScript/CSS/JQuery while accurately depicting what a user would  expect out of a modern video game.</li>
 					<li>Spoke at the Ultimate Developer Conference about archetecting for Android and showed developers how to implenet a local REST cache. Blog post to come.</li>
-					<li>Spoke about Google TV at a <a href="https://developers.google.com/groups/">GDG</a> meet up hosted by <a href="http://bnotions.com/">BNOTIONS</a></li>
+					<li>Spoke about Google TV at a <a href="https://developers.google.com/groups/" target="_blank">GDG</a> meet up hosted by <a href="http://bnotions.com/" target="_blank">BNOTIONS</a></li>
 					<li>Upkeep a blog with relevant information
 					<li>Developed a GUI factory and application for portable devices through J2ME (Java 2 Micro Edition).</li>
 					<li>I am a member of the Fraternity of Phi Gamma Delta where I have held Recording Secretary and Social chair positions. Currently I am on the Board of Chapter Advisors.</li>
