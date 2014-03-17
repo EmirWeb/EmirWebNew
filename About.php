@@ -34,12 +34,12 @@
 			<div class="Logo"><img  src="Images/emir.jpg" height="50px"></div>
 			<div class="Info">
 				<h3>Emir Hasanbegovic</h3>
-				<a href="http://www.twitter.com/ajelive">Twitter: @PhiGammEmir</a><br/>
-				<a href="mailto:emir@emirweb.com">E-mail: emir@emirweb.com</a><br />
-				<a href="http://ca.linkedin.com/pub/emir-hasanbegovic/2b/43a/62a">Linked in</a><br/>
-				<a href="https://plus.google.com/113561694763577258189/posts">Google +</a><br/>
-				<a href="https://www.facebook.com/ehasanbegovic">Facebook</a><br/>
-				
+				<a href="https://github.com/emir-hasanbegovic" target="_blank">GitHub</a><br/>
+				<a href="http://www.twitter.com/phigammemir" target="_blank">Twitter: @PhiGammEmir</a><br/>
+				<a href="mailto:emir@emirweb.com" target="_blank">E-mail: emir@emirweb.com</a><br />
+				<a href="http://ca.linkedin.com/pub/emir-hasanbegovic/2b/43a/62a" target="_blank">Linked in</a><br/>
+				<a href="https://plus.google.com/113561694763577258189/posts" target="_blank">Google +</a><br/>
+				<a href="https://www.facebook.com/ehasanbegovic" target="_blank">Facebook</a><br/>
 			</div>
 			<?php echo Social::getSocialBar(); ?>
 		</div>
@@ -53,13 +53,14 @@
 				
 				<h3><span>(October 2013)- current </span>Agile Engineer for <a href="http://pivotallabs.com/" target="_blank">Pivotal Labs</a></h3>
 				<ul>
-					<li>Architected, developed and led a team of 7 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.mtvPrimeAndroid">MTV</a> Android application with 100,000+ downloads and a rating of 4.1. This application was featured in the play store.</li>
+					<li>Architected, developed and led a team of 5 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.vh1android">VH1</a> Android application with 50,000+ downloads and a rating of 4.1.</li>
+					<li>Architected, developed and led a team of 7 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.mtvPrimeAndroid">MTV</a> Android application with 100,000+ downloads and a rating of 4.0. This application was featured in the play store.</li>
 				</ul>
 				
 				<h3><span>(May 2010)-(October 2013) </span>Agile Engineer for <a href="http://www.xtremelabs.com" target="_blank">Xtreme Labs Inc.</a> (Mobile and Web)</h3>
 				<ul>
 					<li>Architected, developed and led a team of 9 developers to build the <a href="https://play.google.com/store/apps/details?id=com.neat.android&hl=en">Neat &reg;</a> Android application with 10,000+ downloads and a rating of 3.6.</li>
-					<li>Architected, developed the <b>Aljazeera</b> Google TV application. No longer in market. The application was featured in the app store upon Google TV 2.0 launch.</li>
+					<li>Architected and developed the <b>Aljazeera</b> Google TV application. No longer in market. The application was featured in the app store upon Google TV 2.0 launch.</li>
 					<li>Architected and developed the <a href="https://play.google.com/store/apps/details?id=com.xtreme.grammy">MusicMapper</a> Android application with 10,000+ downloads and a rating of 4.3 (API no longer functioning).</li>
 					<li>Built <b>Networking</b>, <b>Image Cache</b> and <b>Horizontal Scroll</b> libraries for that are used in close to 30 Android applications produced by Xtreme Labs Inc.</li>
 					<li>Lead research into <b>Google TV</b>, <b>Google Glass</b> and <b>Chromecast</b> for Xtreme Labs.</li>
