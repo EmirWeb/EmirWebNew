@@ -53,13 +53,16 @@
 				
 				<h3><span>(October 2013)- current </span>Agile Engineer for <a href="http://pivotallabs.com/" target="_blank">Pivotal Labs</a></h3>
 				<ul>
-					<li>Architected, developed and led a team of 5 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.vh1android" target="_blank">VH1</a> Android application with 50,000+ downloads and a rating of 4.1.</li>
-					<li>Architected, developed and led a team of 7 developers to build the <a href="https://play.google.com/store/apps/details?id=com.mtvn.mtvPrimeAndroid" target="_blank">MTV</a> Android application with 100,000+ downloads and a rating of 4.0. This application was featured in the play store.</li>
+					<li>Architected, developed and led a team of 7 developers to build a VOD Android application with 100,000 - 500,000 downloads and a rating of 4.0. This application was featured in the play store.</li>
+					<li>Architected, developed and led a team of 5 developers to build a VOD Android application with 100,000 - 500,000 downloads and a rating of 4.1.</li>
+					<li>Maintain an open source Android scrolling library called <a href="http://parchment.mobi" target="_blank">Parchment</a> </li>
+					<li>Architected and developed a VOD Android application with 10,000 - 50,000 downloads and a rating of 4.4.</li>
+					<li>Architected and developed a VOD Android application with 10,000 - 50,000 downloads and a rating of 4.6.</li>
 				</ul>
 				
 				<h3><span>(May 2010)-(October 2013) </span>Agile Engineer for <a href="http://www.xtremelabs.com" target="_blank">Xtreme Labs Inc.</a> (Mobile and Web)</h3>
 				<ul>
-					<li>Architected, developed and led a team of 9 developers to build the <a href="https://play.google.com/store/apps/details?id=com.neat.android&hl=en" target="_blank">Neat &reg;</a> Android application with 10,000+ downloads and a rating of 3.6.</li>
+					<li>Architected, developed and led a team of 9 developers to build a digital receipt and document manager application with 10,000+ downloads and a rating of 3.6.</li>
 					<li>Architected and developed the <b>Aljazeera</b> Google TV application. No longer in market. The application was featured in the app store upon Google TV 2.0 launch.</li>
 					<li>Architected and developed the <a href="https://play.google.com/store/apps/details?id=com.xtreme.grammy" target="_blank">MusicMapper</a> Android application with 10,000+ downloads and a rating of 4.3 (API no longer functioning).</li>
 					<li>Built <b>Networking</b>, <b>Image Cache</b> and <a href="https://github.com/EmirWeb/parchment" target="_blank">All Purpose Scrolling</a> libraries for that are used in close to 30 Android applications produced by Xtreme Labs Inc.</li>
