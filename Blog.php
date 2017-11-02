@@ -10,8 +10,8 @@
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/Home.css');
 	DomManager::addScript('Scripts/Home.js');
-	DomManager::addScript('Scripts/Blog.js');	
 	DomManager::addScript('Scripts/Taplytics.js');
+	DomManager::addScript('Scripts/Blog.js');	
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
