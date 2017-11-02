@@ -10,6 +10,7 @@
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/Home.css');
 	DomManager::addScript('Scripts/Home.js');
+	DomManager::addScript('Scripts/Blog.js');	
 	DomManager::addScript('Scripts/Taplytics.js');
 ?>
 
