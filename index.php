@@ -12,6 +12,7 @@
 	DomManager::addScript('Scripts/Home.js');
 	DomManager::addScript('Scripts/Taplytics.js');
 	DomManager::addScript('//fast.appcues.com/30050.js');
+	DomManager::addScript('Scripts/Appcues.js');
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
