@@ -20,6 +20,7 @@
 		<?php echo DomManager::getCSS(); ?>		
 		<?php echo DomManager::getScripts(); ?>
 		<?php echo Facebook::getFacebookBlogHead("EmirWeb"); ?>
+		
 	</head>
 	<body>
 		<?php 
