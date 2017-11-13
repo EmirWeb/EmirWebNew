@@ -31,7 +31,7 @@
 			"Scripts/StarFighter/Triangle.js",
 			"Scripts/StarFighter/Constructor.js"
 	));
-	DomManager::addScript('Scripts/Taplytics.js');
+	DomManager::addScript('https://staging.taplytics.com/jssdk/2.0.0/05fe56f23cc940b7a6f17c7963a57c71.min.js?env=staging&log_level=2"');
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
