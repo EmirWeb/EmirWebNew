@@ -12,7 +12,7 @@ include_once('Utils/SyntaxHighlighter.php');
 DomManager::addCSS('CSS/Body.css');
 DomManager::addCSS('CSS/Blog.css');
 DomManager::addCSS('CSS/Social.css');
-DomManager::addScript('https://js.taplytics.com/jssdk/6eb86dda0e7f40069b85b84261e9e7d9.min.js"');
+DomManager::addScript('https://js.taplytics.com/jssdk/2.0.0/6eb86dda0e7f40069b85b84261e9e7d9.min.js"');
 
 $TITLE = "Device Wall: A second screen experiment.";
 ?>
