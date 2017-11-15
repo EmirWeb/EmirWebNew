@@ -10,7 +10,7 @@
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/Home.css');
 	DomManager::addScript('Scripts/Home.js');
-	DomManager::addScript('https://staging.taplytics.com/jssdk/2.0.0/6eb86dda0e7f40069b85b84261e9e7d9.min.js?env=staging&log_level=2"');
+	DomManager::addScript('https://js.taplytics.com/jssdk/6eb86dda0e7f40069b85b84261e9e7d9.min.js"');
 	DomManager::addScript('Scripts/Blog.js');	
 ?>
 
