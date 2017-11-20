@@ -8,8 +8,7 @@
 	DomManager::addCSS('CSS/Body.css');
 	DomManager::addCSS('CSS/Resume.css');
 	DomManager::addScript('Scripts/About.js');
-	DomManager::addScript('https://js.taplytics.com/jssdk/2.0.0/6eb86dda0e7f40069b85b84261e9e7d9.min.js"');
-
+	DomManager::addScript('https://staging.taplytics.com/jssdk/2.1.1/05fe56f23cc940b7a6f17c7963a57c71.min.js?env=staging&log_level=2&user_attributes=%7B%22custom%22%3A1%7D"');
 
 ?>
 
